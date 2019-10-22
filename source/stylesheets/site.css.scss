@@ -1,8 +1,13 @@
+// Enable height: 100% to work in #panorama
+// https://stackoverflow.com/questions/21357238/css-height-100-percent-not-working
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
 }
+
+// stretch to fill whole screen. 
+// ! But Min height 390px of iframe !
 #panorama {
   width: 100%;
   min-height: 390px;
