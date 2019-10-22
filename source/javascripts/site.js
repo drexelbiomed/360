@@ -1,47 +1,58 @@
 // This is where it all goes :)
 pannellum.viewer('panorama', {
   "default": {
-    "firstScene": "Bossone6thFloor",
+    "firstScene": "BossoneAtrium",
     "author": "David Myers",
-    "sceneFadeDuration":  1500
+    "sceneFadeDuration":  1500,
+    // "hotSpotDebug": true
   },
 
   "scenes": {
     "Bossone6thFloor": {
       "title": "Bossone 6th Floor",
-      "preview": "images/preview-six-rows.png",
+      // "preview": "images/preview-six-rows.png",
       "type": "equirectangular",
-      "panorama": "images/six-rows.jpg",
-      "hfov": 45,
-      "yaw": -90,
+      "panorama": "images/six-rows-cc.jpg",
+      "hfov": 100,
       "pitch": -10,
+      "yaw": -110,
       "autoLoad": true,
       "autoRotate": -2,
       // "hotSpotDebug": true,
       "hotSpots": [
         {
-          "pitch": -3.2083557288453783,
-          "yaw": -113.5555885681672,
-          "type": "info",
-          "text": "pitch: 0, yaw: 0"
-        },
-        {
-          "pitch": 0,
-          "yaw": 90,
-          "type": "info",
-          "text": "pitch: 0, yaw: 90"
+          "pitch": -15.4,
+          "yaw": -116.1,
+          "type": "scene",
+          "text": "Go downstairs",
+          "sceneId": "BossoneAtrium"
         },
         {
           "pitch": 0,
           "yaw": 169,
           "type": "info",
           "text": "Research Poster: Harnessing the Inflammatory Response for the Diagnosis of Diabetic Ulcers"
-        },
+        }
+      ]
+    },
+    "BossoneAtrium": {
+      "title": "Bossone 3rd Floor Atrium",
+      // "preview": "images/preview-six-rows.png",
+      "type": "equirectangular",
+      "panorama": "images/Atrium_2.jpg",
+      "pitch": 31.5,
+      "yaw": 68.2,
+      "hfov": 100,
+      "autoLoad": true,
+      "autoRotate": 2,
+      // "hotSpotDebug": true,
+      "hotSpots": [
         {
-          "pitch": 0,
-          "yaw": 270,
-          "type": "info",
-          "text": "pitch: 0, yaw: 270"
+          "pitch": 27.6,
+          "yaw": 22.4,
+          "type": "scene",
+          "text": "Go upstairs",
+          "sceneId": "Bossone6thFloor"
         }
       ]
     }
