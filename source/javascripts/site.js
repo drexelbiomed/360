@@ -42,7 +42,7 @@ pannellum.viewer('panorama', {
     // ATRIUM
     // =============================================
     "BossoneAtrium": {
-      "title": "Bossone 3rd Floor Atrium",
+      "title": "Bossone 3rd Floor Atrium<br><small>32nd and Market Streets</small>",
       // "preview": "images/preview-six-rows.png",
       "type": "equirectangular",
       "panorama": "images/Atrium_2.jpg",
