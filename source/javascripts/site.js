@@ -8,6 +8,9 @@ pannellum.viewer('panorama', {
   },
 
   "scenes": {
+    // =============================================
+    // 6th Floor
+    // =============================================
     "Bossone6thFloor": {
       "title": "Bossone 6th Floor",
       // "preview": "images/preview-six-rows.png",
@@ -35,6 +38,9 @@ pannellum.viewer('panorama', {
         }
       ]
     },
+    // =============================================
+    // ATRIUM
+    // =============================================
     "BossoneAtrium": {
       "title": "Bossone 3rd Floor Atrium",
       // "preview": "images/preview-six-rows.png",
@@ -48,11 +54,41 @@ pannellum.viewer('panorama', {
       // "hotSpotDebug": true,
       "hotSpots": [
         {
+          "pitch": -2.3,
+          "yaw": -145.1,
+          "type": "scene",
+          "text": "Go to Main Building",
+          "sceneId": "MainBldg"
+        },
+        {
           "pitch": 27.6,
           "yaw": 22.4,
           "type": "scene",
           "text": "Go upstairs",
           "sceneId": "Bossone6thFloor"
+        }
+      ]
+    },
+    // =============================================
+    // Main Building
+    // =============================================
+    "MainBldg": {
+      "title": "Main Building",
+      "panorama": "images/Main-Bldg-Test-1-cc.jpg",
+      "type": "equirectangular",
+      "pitch": 0,
+      "yaw": -171.2,
+      "hfov": 100,
+      "autoLoad": true,
+      "autoRotate": 2,
+      // "hotSpotDebug": true,
+      "hotSpots": [
+        {
+          "pitch":  6.8,
+          "yaw": 102.1,
+          "type": "scene",
+          "text": "Go to Bossone Atrium",
+          "sceneId": "BossoneAtrium"
         }
       ]
     }
