@@ -1,43 +1,14 @@
 // This is where it all goes :)
 pannellum.viewer('panorama', {
   "default": {
-    "firstScene": "BossoneAtrium",
+    "firstScene": "Chop",
     "author": "David Myers",
-    "sceneFadeDuration":  1500,
+    "sceneFadeDuration":  1500
+    // "compass": true
     // "hotSpotDebug": true
   },
 
   "scenes": {
-    // =============================================
-    // 6th Floor
-    // =============================================
-    "Bossone6thFloor": {
-      "title": "Bossone 6th Floor",
-      // "preview": "images/preview-six-rows.png",
-      "type": "equirectangular",
-      "panorama": "images/six-rows-cc.jpg",
-      "hfov": 100,
-      "pitch": -10,
-      "yaw": -110,
-      "autoLoad": true,
-      "autoRotate": -2,
-      // "hotSpotDebug": true,
-      "hotSpots": [
-        {
-          "pitch": -15.4,
-          "yaw": -116.1,
-          "type": "scene",
-          "text": "Go downstairs",
-          "sceneId": "BossoneAtrium"
-        },
-        {
-          "pitch": 0,
-          "yaw": 169,
-          "type": "info",
-          "text": "Research Poster: Harnessing the Inflammatory Response for the Diagnosis of Diabetic Ulcers"
-        }
-      ]
-    },
     // =============================================
     // ATRIUM
     // =============================================
@@ -61,11 +32,18 @@ pannellum.viewer('panorama', {
           "sceneId": "MainBldg"
         },
         {
+          "pitch": 1.5,
+          "yaw": 104,
+          "type": "scene",
+          "text": "Elevator to Biomed 7th Floor Lobby",
+          "sceneId": "BiomedLobby"
+        },
+        {
           "pitch": 27.6,
           "yaw": 22.4,
           "type": "scene",
-          "text": "Go upstairs",
-          "sceneId": "Bossone6thFloor"
+          "text": "Go to the labs",
+          "sceneId": "BiomedLabs"
         }
       ]
     },
@@ -86,6 +64,75 @@ pannellum.viewer('panorama', {
         {
           "pitch":  6.8,
           "yaw": 102.1,
+          "type": "scene",
+          "text": "Go to Bossone Atrium",
+          "sceneId": "BossoneAtrium"
+        }
+      ]
+    },
+    // =============================================
+    // BIOMED Lobby
+    // =============================================
+    "BiomedLobby": {
+      "title": "BIOMED Lobby",
+      "panorama": "images/Lobby-cc.jpg",
+      "type": "equirectangular",
+      "pitch": -10,
+      "yaw": -53.2,
+      "hfov": 100,
+      "autoLoad": true,
+      "autoRotate": -2,
+      // "hotSpotDebug": true,
+      "hotSpots": [
+        {
+          "pitch":  .9,
+          "yaw": -177,
+          "type": "scene",
+          "text": "Go to Bossone Atrium",
+          "sceneId": "BossoneAtrium"
+        }
+      ]
+    },
+    // =============================================
+    // Labs
+    // =============================================
+    "BiomedLabs": {
+      "title": "BIOMED Labs",
+      "panorama": "images/Labs_fused-cc.jpg",
+      "type": "equirectangular",
+      "pitch": -7.65,
+      "yaw": 12.93,
+      "hfov": 100,
+      "autoLoad": true,
+      "autoRotate": 2,
+      // "hotSpotDebug": true,
+      "hotSpots": [
+        {
+          "pitch":  1.5,
+          "yaw": -52,
+          "type": "scene",
+          "text": "Go to Bossone Atrium",
+          "sceneId": "BossoneAtrium"
+        }
+      ]
+    },
+    // =============================================
+    // CHOP
+    // =============================================
+    "Chop": {
+      "title": "Chop",
+      "panorama": "images/chop-cc.jpg",
+      "type": "equirectangular",
+      "pitch": -7.65,
+      "yaw": 12.93,
+      "hfov": 100,
+      "autoLoad": true,
+      "autoRotate": 2,
+      // "hotSpotDebug": true,
+      "hotSpots": [
+        {
+          "pitch":  1.5,
+          "yaw": -52,
           "type": "scene",
           "text": "Go to Bossone Atrium",
           "sceneId": "BossoneAtrium"
