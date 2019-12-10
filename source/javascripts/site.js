@@ -131,8 +131,18 @@ pannellum.viewer('panorama', {
       // "hotSpotDebug": true,
       "hotSpots": [
         {
+          "pitch":  10,
+          "yaw": -44,
+          "cssClass": "custom-hotspot",
+          "createTooltipFunc": hotspot,
+          "createTooltipArgs": { 
+            "text": "Go on co-op!",
+            "video": "https://www.youtube.com/watch?v=JZ_kUo7Gr6c"
+          }
+        }, 
+        {
           "pitch":  1.5,
-          "yaw": -52,
+          "yaw": 100,
           "type": "scene",
           "text": "Go to Bossone Atrium",
           "sceneId": "BossoneAtrium"
@@ -141,3 +151,14 @@ pannellum.viewer('panorama', {
     }
   }
 });
+
+// Hot spot creation function
+function hotspot(hotSpotDiv, args) {
+    hotSpotDiv.classList.add('custom-tooltip');
+    var span = document.createElement('span');
+    span.innerHTML = "<a href=\"" + args.video + "\">" + args.text + "</a>";
+    hotSpotDiv.appendChild(span);
+    span.style.width = span.scrollWidth - 20 + 'px';
+    span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
+    span.style.marginTop = -span.scrollHeight - 12 + 'px';
+}
