@@ -1,20 +1,18 @@
 // This is where it all goes :)
-pannellum.viewer('panorama', {
+viewer = pannellum.viewer('viewer', {
   "default": {
     "firstScene": "Chop",
     "author": "David Myers",
     "sceneFadeDuration":  1500
-    // "compass": true
-    // "hotSpotDebug": true
   },
 
   "scenes": {
-    // =============================================
-    // ATRIUM
+    
+    // Atrium
     // =============================================
     "BossoneAtrium": {
+      // "hotSpotDebug": true,
       "title": "Bossone 3rd Floor Atrium<br><small>32nd and Market Streets</small>",
-      // "preview": "images/preview-six-rows.png",
       "type": "equirectangular",
       "panorama": "images/Atrium_2.jpg",
       "pitch": 31.5,
@@ -22,7 +20,6 @@ pannellum.viewer('panorama', {
       "hfov": 100,
       "autoLoad": true,
       "autoRotate": 2,
-      // "hotSpotDebug": true,
       "hotSpots": [
         {
           "pitch": -2.3,
@@ -47,10 +44,11 @@ pannellum.viewer('panorama', {
         }
       ]
     },
-    // =============================================
+
     // Main Building
     // =============================================
     "MainBldg": {
+      // "hotSpotDebug": true,
       "title": "Main Building",
       "panorama": "images/Main-Bldg-Test-1-cc.jpg",
       "type": "equirectangular",
@@ -59,7 +57,6 @@ pannellum.viewer('panorama', {
       "hfov": 100,
       "autoLoad": true,
       "autoRotate": 2,
-      // "hotSpotDebug": true,
       "hotSpots": [
         {
           "pitch":  6.8,
@@ -70,10 +67,11 @@ pannellum.viewer('panorama', {
         }
       ]
     },
-    // =============================================
+
     // BIOMED Lobby
     // =============================================
     "BiomedLobby": {
+      // "hotSpotDebug": true,
       "title": "BIOMED Lobby",
       "panorama": "images/Lobby-cc.jpg",
       "type": "equirectangular",
@@ -82,7 +80,6 @@ pannellum.viewer('panorama', {
       "hfov": 100,
       "autoLoad": true,
       "autoRotate": -2,
-      // "hotSpotDebug": true,
       "hotSpots": [
         {
           "pitch":  .9,
@@ -93,10 +90,11 @@ pannellum.viewer('panorama', {
         }
       ]
     },
-    // =============================================
+
     // Labs
     // =============================================
     "BiomedLabs": {
+      // "hotSpotDebug": true,
       "title": "BIOMED Labs",
       "panorama": "images/Labs_fused-cc.jpg",
       "type": "equirectangular",
@@ -105,7 +103,6 @@ pannellum.viewer('panorama', {
       "hfov": 100,
       "autoLoad": true,
       "autoRotate": 2,
-      // "hotSpotDebug": true,
       "hotSpots": [
         {
           "pitch":  1.5,
@@ -116,10 +113,11 @@ pannellum.viewer('panorama', {
         }
       ]
     },
-    // =============================================
+
     // CHOP
     // =============================================
     "Chop": {
+      // "hotSpotDebug": true,
       "title": "Chop",
       "panorama": "images/chop-cc.jpg",
       "type": "equirectangular",
@@ -128,7 +126,6 @@ pannellum.viewer('panorama', {
       "hfov": 100,
       "autoLoad": true,
       "autoRotate": 2,
-      // "hotSpotDebug": true,
       "hotSpots": [
         {
           "pitch":  10,
@@ -154,11 +151,39 @@ pannellum.viewer('panorama', {
 
 // Hot spot creation function
 function hotspot(hotSpotDiv, args) {
-    hotSpotDiv.classList.add('custom-tooltip');
-    var span = document.createElement('span');
-    span.innerHTML = "<a href=\"" + args.video + "\">" + args.text + "</a>";
-    hotSpotDiv.appendChild(span);
-    span.style.width = span.scrollWidth - 20 + 'px';
-    span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
-    span.style.marginTop = -span.scrollHeight - 12 + 'px';
+  hotSpotDiv.classList.add('custom-tooltip');
+  var span = document.createElement('span');
+  span.innerHTML = "<input id='btn' type='button' value='" + args.text + "' />";
+  hotSpotDiv.appendChild(span);
+  span.style.width = span.scrollWidth - 20 + 'px';
+  span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
+  span.style.marginTop = -span.scrollHeight - 12 + 'px';
+  
+  var el = document.getElementById("btn").addEventListener('click', function(e) {
+    viewer.loadScene("BiomedLabs");
+  });
 }
+
+// Sidebar Controls
+// =============================
+
+var lobbyBtn = document.getElementById("BiomedLobbyBtn").addEventListener('click', function(e) {
+  viewer.loadScene("BiomedLobby"); 
+});
+
+var lobbyBtn = document.getElementById("MainBldgBtn").addEventListener('click', function(e) {
+  viewer.loadScene("MainBldg"); 
+});
+
+var lobbyBtn = document.getElementById("BiomedLabsBtn").addEventListener('click', function(e) {
+  viewer.loadScene("BiomedLabs"); 
+});
+
+var lobbyBtn = document.getElementById("ChopBtn").addEventListener('click', function(e) {
+  viewer.loadScene("Chop"); 
+});
+
+var lobbyBtn = document.getElementById("AtriumBtn").addEventListener('click', function(e) {
+  viewer.loadScene("BossoneAtrium"); 
+});
+
