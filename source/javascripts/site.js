@@ -1,7 +1,7 @@
 // This is where it all goes :)
 viewer = pannellum.viewer('viewer', {
   "default": {
-    "firstScene": "Chop",
+    "firstScene": "Skyline",
     "author": "David Myers",
     "sceneFadeDuration":  1500
   },
@@ -145,6 +145,27 @@ viewer = pannellum.viewer('viewer', {
           "sceneId": "BossoneAtrium"
         }
       ]
+    },
+    // Skyline
+    // =============================================
+    "Skyline": {
+      // "hotSpotDebug": true,
+      "title": "Philadelphia Skyline<br><small>View from Drexel Summit</small>",
+      "type": "equirectangular",
+      "panorama": "images/Philly-Skyline.jpg",
+      "maxPitch": 25,
+      "minPitch": -25,
+      "pitch": 10,
+      "yaw":  0,
+      "hfov": 40,
+      "minHfov": 20,
+      "maxHfov": 40,
+      "haov": 133,
+      "vaov": 54,
+      "minYaw": -42,
+      "maxYaw": 58,
+      "autoLoad": true,
+      "autoRotate": -1
     }
   }
 });
@@ -185,5 +206,9 @@ var lobbyBtn = document.getElementById("ChopBtn").addEventListener('click', func
 
 var lobbyBtn = document.getElementById("AtriumBtn").addEventListener('click', function(e) {
   viewer.loadScene("BossoneAtrium"); 
+});
+
+var lobbyBtn = document.getElementById("SkylineBtn").addEventListener('click', function(e) {
+  viewer.loadScene("Skyline"); 
 });
 
