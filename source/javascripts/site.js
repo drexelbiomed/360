@@ -259,10 +259,6 @@ var lookAtBossone = document.getElementById("lookAt_Bossone").addEventListener('
   viewer.lookAt(-2.3, 22, 20, 1500, viewer.stopAutoRotate); 
 });
 
-var lookAtNesbitt = document.getElementById("lookAt_Nesbitt").addEventListener('click', function(e) {
-  viewer.lookAt(-11.5, 31, 26, 1500, viewer.stopAutoRotate); 
-});
-
 // Look At Lobby
 
 var lookAtCoulter = document.getElementById("lookAt_Coulter").addEventListener('click', function(e) {
