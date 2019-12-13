@@ -8,7 +8,6 @@ viewer = pannellum.viewer('viewer', {
   },
 
   "scenes": {
-    
     // Atrium
     // =============================================
     "BossoneAtrium": {
@@ -128,8 +127,7 @@ viewer = pannellum.viewer('viewer', {
           "type": "info",
           "video": "http://techslides.com/demos/sample-videos/small.mp4",
           "width": "200"
-        },
-
+        }
       ]
     },
 
@@ -184,7 +182,25 @@ viewer = pannellum.viewer('viewer', {
       "minYaw": -42,
       "maxYaw": 58,
       "autoLoad": true,
-      "autoRotate": -0.1
+      "autoRotate": -0.1,
+      "hotSpots": [
+        {
+          "pitch": 1,
+          "yaw": 22.4,
+          "type": "info",
+          "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>",
+          "image": "images/bossone.jpg",
+          "width": 200
+        },
+        {
+          "pitch": 5.1,
+          "yaw": -1.6,
+          "type": "info",
+          "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>",
+          "image": "images/30thStreet.jpg",
+          "width": 200
+        }        
+      ]
     }
   }
 });
