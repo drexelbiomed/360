@@ -7,10 +7,20 @@ html, body {
 }
 
 // stretch to fill whole screen. 
-#panorama {
-  width: 100%;
+#viewer {
+  width: 62%;
   min-height: 390px; // ! Min height 390px !
   height: 100%;
+}
+
+#controller {
+  width: 38%;
+  min-height: 390px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 62%;
+  overflow-y: scroll;
 }
 
 .custom-hotspot {
