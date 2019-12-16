@@ -1,6 +1,6 @@
 viewer = pannellum.viewer('viewer', {
   "default": {
-    "hotSpotDebug": true,
+    // "hotSpotDebug": true,
     "firstScene": "Skyline",
     // "author": "David Myers",
     "sceneFadeDuration":  1500
@@ -198,6 +198,16 @@ viewer = pannellum.viewer('viewer', {
           "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>",
           "image": "images/30thStreet.jpg",
           "width": 200
+        },
+        {
+          "pitch": 0,
+          "yaw": 0,
+          "cssClass": "custom-hotspot",
+          "createTooltipFunc": hotspot,
+          "createTooltipArgs": { 
+            "text": "Go on co-op!",
+            "video": "https://www.youtube.com/watch?v=JZ_kUo7Gr6c"
+          }
         }        
       ]
     }
