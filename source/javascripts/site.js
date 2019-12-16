@@ -3,3 +3,4 @@
 //= require initPannellum
 //= require hotspotFunctions
 //= require sidebarEventListeners
+//= require hotspotCounter
