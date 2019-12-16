@@ -2,7 +2,7 @@ viewer = pannellum.viewer('viewer', {
   "default": {
     "hotSpotDebug": true,
     "firstScene": "Skyline",
-    "author": "David Myers",
+    // "author": "David Myers",
     "sceneFadeDuration":  1500
   },
 
