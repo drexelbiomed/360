@@ -67,18 +67,22 @@ viewer = pannellum.viewer('viewer', {
         {
           "pitch": 13.7, 
           "yaw": -169.2,
-          "type": "info",
-          "text": "\"Be on time\"",
-          "image": "images/Ryder_sitecore.jpg",
-          "width": 200
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "text": "\"Be on time\"",
+            "image": "images/Ryder_sitecore.jpg"
+          }
         },
         {
           "pitch": 0, 
           "yaw": 95.2,
-          "type": "info",
-          "text": "Main Auditorium is the heart of Drexel University's tradition and grandeur.",
-          "image": "images/Main_Auditorium.jpg",
-          "width": 220
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "text": "Main Auditorium is the heart of Drexel University's tradition and grandeur.",
+            "image": "images/Main_Auditorium.jpg"
+          }
         }
       ]
     },
@@ -122,10 +126,12 @@ viewer = pannellum.viewer('viewer', {
         {
           "pitch":  1.5,
           "yaw": -52,
-          "text": "Watch STAR Scholar",
-          "type": "info",
-          "video": "http://techslides.com/demos/sample-videos/small.mp4",
-          "width": "200"
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "text": "Watch Star Scholars",
+            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"
+          }
         }
       ]
     },
@@ -146,11 +152,11 @@ viewer = pannellum.viewer('viewer', {
         {
           "pitch":  10,
           "yaw": -44,
-          "cssClass": "custom-hotspot",
-          "createTooltipFunc": hotspot,
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "text": "Go on co-op!",
-            "video": "https://www.youtube.com/watch?v=JZ_kUo7Gr6c"
+            "video": "https://www.youtube-nocookie.com/embed/JZ_kUo7Gr6c"
           }
         }, 
         {
@@ -186,29 +192,23 @@ viewer = pannellum.viewer('viewer', {
         {
           "pitch": 1,
           "yaw": 22.4,
-          "type": "info",
-          "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>",
-          "image": "images/bossone.jpg",
-          "width": 200
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>",
+            "image": "images/bossone.jpg"
+          }
         },
         {
           "pitch": 5.1,
           "yaw": -1.6,
-          "type": "info",
-          "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>",
-          "image": "images/30thStreet.jpg",
-          "width": 200
-        },
-        {
-          "pitch": 0,
-          "yaw": 0,
-          "cssClass": "custom-hotspot",
-          "createTooltipFunc": hotspot,
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
-            "text": "Go on co-op!",
-            "video": "https://www.youtube.com/watch?v=JZ_kUo7Gr6c"
+            "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>",
+            "image": "images/30thStreet.jpg"
           }
-        }        
+        }     
       ]
     }
   }
