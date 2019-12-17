@@ -1,4 +1,5 @@
-var experience = { "scenes": [
+var experience = { 
+  "scenes": [
       {
         "title": "Welcome to Philadelphia!",
         "id": "loadScene_Skyline", 
@@ -60,7 +61,7 @@ var experience = { "scenes": [
         "features": []
       }
     ]
-  }
+  };
 
 var sidebar = document.getElementById("controller");
 
