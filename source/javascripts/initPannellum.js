@@ -37,7 +37,7 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "bossone-marker",
-            "button": "Bossone Research Center",
+            "label": "Bossone Research Center",
             "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>",
             "image": "images/bossone.jpg"
           }
@@ -51,7 +51,7 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "30th-marker",
-            "button": "30th Street Station",
+            "label": "30th Street Station",
             "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>",
             "image": "images/30thStreet.jpg"
           }
@@ -110,6 +110,7 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "clock-marker",
+            "label": "Ryder Clock",
             "text": "\"Be on time\"",
             "image": "images/Ryder_sitecore.jpg"
           }
@@ -123,6 +124,7 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "auditorium-marker",
+            "label": "Auditorium",
             "text": "Main Auditorium is the heart of Drexel University's tradition and grandeur.",
             "image": "images/Main_Auditorium.jpg"
           }
@@ -153,6 +155,7 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "star-video",
+            "label": "Watch Star Scholars",
             "text": "Watch Star Scholars",
             "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"
           }
@@ -182,6 +185,7 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "co-op-video",
+            "label": "Clinical Immersion Co-op",
             "text": "Go on co-op!",
             "video": "https://www.youtube-nocookie.com/embed/JZ_kUo7Gr6c"
           }

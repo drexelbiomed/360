@@ -13,7 +13,7 @@ function populateNav (scene, master) {
   for (id in scenes) {
     var li = createLoadSceneBtn(scenes[id].title, id); // console.log(scenes[id]);
     var hotSpots = scenes[id].hotSpots; // console.log(hotspots);
-    
+
     for (hs in hotSpots) {
       if (hotSpots[hs].type == "lookAt") {
         var btn = createLookAtBtn(hotSpots[hs]);
@@ -43,7 +43,7 @@ function createLookAtBtn (hs) {
   var lookBtn = document.createElement("input");
   lookBtn.setAttribute("type", "button");
   lookBtn.setAttribute("id", "lookAt_" + hs.createTooltipArgs.id);
-  lookBtn.setAttribute("value", hs.createTooltipArgs.id);
+  lookBtn.setAttribute("value", hs.createTooltipArgs.label);
   lookBtn.addEventListener('click', function(e) { viewer.lookAt(hs.pitch, hs.yaw, hs.hfov, 1500, viewer.stopAutoRotate()) });
   return lookBtn;
 }
