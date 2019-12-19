@@ -1,6 +1,11 @@
-viewer.on('scenechange',
-    function () {
-        console.log("Scene changed");
-        console.log("Id: " + viewer.getScene());
-    }
+viewer.on('load',
+  function () {
+    updateNav(viewer.getScene());
+  }
 );
+// viewer.on('scenechange',
+//   function () {
+//     var newScene = viewer.getScene();
+//     updateNav(newScene);
+//   }
+// );

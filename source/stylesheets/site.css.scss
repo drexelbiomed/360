@@ -75,3 +75,12 @@ div.tooltipV1 span.show:after {
   width: 100%;
   height: auto;
 }
+
+
+.features {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
