@@ -2,3 +2,4 @@
 //= require navigation
 //= require hotspotFunctions
 //= require hotspotCounter
+//= require pannellumListener
