@@ -1,31 +1,49 @@
-var controller = document.getElementById("controller");
-var list = document.createElement("ol");
+var controllerDiv = document.getElementById("controller");
+var controllerOl = document.createElement("ol");
+var currentScene = viewer.getScene();
+var viewerConfig = viewer.getConfig()
 
-for (s in experience.scenes) {
-  var li = document.createElement("li");
-  var h2 = document.createElement("h2");
-  var sceneBtn = document.createElement("input");
+controllerDiv.appendChild(controllerOl);
+populateNav(currentScene, viewerConfig);
 
-  h2.innerHTML = experience.scenes[s].title
-
-  sceneBtn.setAttribute("type", "button");
-  sceneBtn.setAttribute("id", experience.scenes[s].id);
-  sceneBtn.setAttribute("value", "Go!");
+function populateNav (scene, master) {
+  var current = master.scenes[scene]; // console.log(current);
+  var scenes = master.scenes; // console.log(scenes);
   
-  h2.appendChild(sceneBtn);
-
-  li.appendChild(h2);
-
-  for (f in experience.scenes[s].features ) {
-    var lookBtn = document.createElement("input");
-    lookBtn.setAttribute("type", "button");
-    lookBtn.setAttribute("id", experience.scenes[s].features[f].id);
-    lookBtn.setAttribute("value", experience.scenes[s].features[f].title);
-    li.appendChild(lookBtn);
-    li.appendChild(document.createElement("br"));
+  for (id in scenes) {
+    var li = createLoadSceneBtn(scenes[id].title, id); // console.log(scenes[id]);
+    var hotSpots = scenes[id].hotSpots; // console.log(hotspots);
+    
+    for (hs in hotSpots) {
+      if (hotSpots[hs].type == "lookAt") {
+        var btn = createLookAtBtn(hotSpots[hs]);
+        li.appendChild(btn)
+      }
+    }
+    controllerOl.appendChild(li);
   }
-
-  list.appendChild(li);
 }
 
-controller.appendChild(list);
+function createLoadSceneBtn (sceneTitle, sceneId) {
+  var li = document.createElement("li"),
+      h2 = document.createElement("h2"),
+      sceneBtn = document.createElement("input");
+
+  h2.innerHTML = sceneTitle;
+  sceneBtn.setAttribute("type", "button");
+  sceneBtn.setAttribute("id", "loadScene_" + sceneId)
+  sceneBtn.setAttribute("value", "Go!");
+  sceneBtn.addEventListener('click', function(e) { viewer.loadScene(sceneId) });
+  h2.appendChild(sceneBtn);
+  li.appendChild(h2);
+  return li;
+}
+
+function createLookAtBtn (hs) {
+  var lookBtn = document.createElement("input");
+  lookBtn.setAttribute("type", "button");
+  lookBtn.setAttribute("id", "lookAt_" + hs.createTooltipArgs.id);
+  lookBtn.setAttribute("value", hs.createTooltipArgs.id);
+  lookBtn.addEventListener('click', function(e) { viewer.lookAt(hs.pitch, hs.yaw, hs.hfov, 1500, viewer.stopAutoRotate()) });
+  return lookBtn;
+}

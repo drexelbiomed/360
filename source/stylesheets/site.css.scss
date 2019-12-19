@@ -8,19 +8,21 @@ html, body {
 
 // stretch to fill whole screen. 
 #viewer {
-  width: 62%;
-  min-height: 390px; // ! Min height 390px !
+  width: 100%;
+  min-height: 480px; // ! Min height  !
   height: 100%;
 }
 
 #controller {
+  z-index: 999;
+  position: absolute;
   width: 38%;
   min-height: 390px;
   height: 100%;
-  position: absolute;
   top: 0px;
   left: 62%;
   overflow-y: scroll;
+  background-color: rgba(#fefefe, 0.75);
 }
 
 .hotspotV1 {
