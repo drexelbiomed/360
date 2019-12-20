@@ -5,22 +5,32 @@ html, body {
   padding: 0;
   height: 100%;
 }
+.perspective, .container, .wrapper {
+  height: 100%;
+}
+
+p, ol, ul, li {
+  font-family: Arial, sans-serif;
+  color: #07294d;
+}
 
 // stretch to fill whole screen. 
 #viewer {
-  width: 62%;
-  min-height: 390px; // ! Min height 390px !
+  width: 100%;
+  min-height: 390px; // ! Min height  !
   height: 100%;
 }
 
 #controller {
-  width: 38%;
-  min-height: 390px;
-  height: 100%;
+  z-index: 999;
   position: absolute;
+  width: 38%;
+  min-height: 320px;
   top: 0px;
   left: 62%;
+  min-width: 320px;
   overflow-y: scroll;
+  background-color: rgba(#ffc600, 0.75);
 }
 
 .hotspotV1 {
@@ -49,6 +59,7 @@ div.tooltipV1 span {
 }
 
 div.tooltipV1 span.show {
+  z-index: 9999;
   visibility: visible;
   opacity: 1;
     transform: translateX(0);
@@ -72,4 +83,15 @@ div.tooltipV1 span.show:after {
   max-width: 320px;
   width: 100%;
   height: auto;
+}
+
+
+.features {
+  visibility: hidden;
+  display: none;
+}
+
+.show {
+  visibility: visible;
+  display: block;
 }
