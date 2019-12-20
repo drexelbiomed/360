@@ -31,7 +31,7 @@ viewer = pannellum.viewer('viewer', {
         {
           "pitch": 1,
           "yaw": 22.4,
-          "hfov": 50,
+          "hfov": 25,
           "type": "lookAt",
           "cssClass": "hotspotV1",
           "createTooltipFunc": hotspotV1,
@@ -45,7 +45,7 @@ viewer = pannellum.viewer('viewer', {
         {
           "pitch": 5.1,
           "yaw": -1.6,
-          "hfov": 50,
+          "hfov": 25,
           "type": "lookAt",
           "cssClass": "hotspotV1",
           "createTooltipFunc": hotspotV1,
@@ -62,7 +62,7 @@ viewer = pannellum.viewer('viewer', {
     // =============================================
     "BiomedLobby": {
       // "hotSpotDebug": true,
-      "title": "BIOMED Lobby",
+      "title": "BIOMED Lobby<br><small>32nd and Market Streets</small>",
       "panorama": "images/Lobby-cc.jpg",
       "type": "equirectangular",
       "pitch": -10,
@@ -85,7 +85,7 @@ viewer = pannellum.viewer('viewer', {
     // =============================================
     "MainBldg": {
       // "hotSpotDebug": true,
-      "title": "Main Building",
+      "title": "Go to Class - Main Building<br><small>32nd and Chestnut Streets</small>",
       "panorama": "images/Main-Bldg-Test-1-cc.jpg",
       "type": "equirectangular",
       "pitch": 0,
@@ -137,7 +137,7 @@ viewer = pannellum.viewer('viewer', {
     // =============================================
     "BiomedLabs": {
       // "hotSpotDebug": true,
-      "title": "BIOMED Labs",
+      "title": "BIOMED Labs<br><small>STAR Research Program</small>",
       "panorama": "images/Labs_fused-cc.jpg",
       "type": "equirectangular",
       "pitch": -7.65,
@@ -167,7 +167,7 @@ viewer = pannellum.viewer('viewer', {
     // =============================================
     "Chop": {
       // "hotSpotDebug": true,
-      "title": "Chop",
+      "title": "Go on Co-op<br><small>Children's Hospital of Philadelphia (CHOP)</small>",
       "panorama": "images/chop-cc.jpg",
       "type": "equirectangular",
       "pitch": -7.65,

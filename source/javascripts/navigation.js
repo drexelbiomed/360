@@ -32,7 +32,7 @@ function populateNav (scene, master) {
 
 function createLoadSceneBtn (sceneTitle, sceneId) {
   var li = document.createElement("li"),
-      h2 = document.createElement("h2"),
+      h2 = document.createElement("p"),
       sceneBtn = document.createElement("input");
 
   h2.innerHTML = sceneTitle;
