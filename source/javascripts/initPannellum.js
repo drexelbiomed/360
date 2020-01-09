@@ -1,7 +1,7 @@
 viewer = pannellum.viewer('viewer', {
   "default": {
     // "hotSpotDebug": true,
-    "firstScene": "Skyline",
+    "firstScene": "1-Skyline",
     // "author": "David Myers",
     "sceneFadeDuration":  1500
   },
@@ -9,7 +9,7 @@ viewer = pannellum.viewer('viewer', {
   "scenes": {
     // Skyline
     // =============================================
-    "Skyline": {
+    "1-Skyline": {
       // "hotSpotDebug": true,
       "title": "Philadelphia Skyline<br><small>View from Drexel Summit</small>",
       "type": "equirectangular",
@@ -60,7 +60,7 @@ viewer = pannellum.viewer('viewer', {
     },
     // BIOMED Lobby
     // =============================================
-    "BiomedLobby": {
+    "2-BiomedLobby": {
       // "hotSpotDebug": true,
       "title": "BIOMED Lobby<br><small>32nd and Market Streets</small>",
       "panorama": "images/Lobby-cc.jpg",
@@ -83,7 +83,7 @@ viewer = pannellum.viewer('viewer', {
 
     // Main Building
     // =============================================
-    "MainBldg": {
+    "3-MainBldg": {
       // "hotSpotDebug": true,
       "title": "Go to Class - Main Building<br><small>32nd and Chestnut Streets</small>",
       "panorama": "images/Main-Bldg-Test-1-cc.jpg",
@@ -135,7 +135,7 @@ viewer = pannellum.viewer('viewer', {
 
     // Labs
     // =============================================
-    "BiomedLabs": {
+    "4-BiomedLabs": {
       // "hotSpotDebug": true,
       "title": "BIOMED Labs<br><small>STAR Research Program</small>",
       "panorama": "images/Labs_fused-cc.jpg",
@@ -165,7 +165,7 @@ viewer = pannellum.viewer('viewer', {
 
     // CHOP
     // =============================================
-    "Chop": {
+    "5-Chop": {
       // "hotSpotDebug": true,
       "title": "Go on Co-op<br><small>Children's Hospital of Philadelphia (CHOP)</small>",
       "panorama": "images/chop-cc.jpg",
@@ -201,7 +201,7 @@ viewer = pannellum.viewer('viewer', {
     },
         // Atrium
     // =============================================
-    "BossoneAtrium": {
+    "6-BossoneAtrium": {
       // "hotSpotDebug": true,
       "title": "Bossone 3rd Floor Atrium<br><small>32nd and Market Streets</small>",
       "type": "equirectangular",

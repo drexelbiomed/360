@@ -9,11 +9,12 @@ html, body {
   height: 100%;
 }
 
-p, ol, ul, li {
-  font-family: Arial, sans-serif;
-  color: #07294d;
+#controller {
+  p, ol, ul, li {
+    font-family: Arial, sans-serif;
+    color: #07294d;
+  }
 }
-
 // stretch to fill whole screen. 
 #viewer {
   width: 100%;
@@ -31,6 +32,10 @@ p, ol, ul, li {
   min-width: 320px;
   overflow-y: scroll;
   background-color: rgba(#ffc600, 0.75);
+}
+
+.pad-5 {
+  padding-right: 5px;
 }
 
 .hotspotV1 {

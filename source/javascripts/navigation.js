@@ -1,13 +1,40 @@
 var controllerDiv = document.getElementById("controller");
 var controllerOl = document.createElement("ol");
+var walkThruDiv = document.createElement("div");
 var currentScene = viewer.getScene();
 var viewerConfig = viewer.getConfig();
 
+// --- Populate ---
+
+populateNavDelegate(viewerConfig, controllerDiv);
 
 controllerDiv.appendChild(controllerOl);
-populateNav(currentScene, viewerConfig);
+populateOlNav(currentScene, viewerConfig);
 
-function populateNav (scene, master) {
+function populateNavDelegate(config, containerDiv) {
+  forEachSceneAddBtns(config.scenes, containerDiv);
+}
+
+function forEachSceneAddBtns(scenes, containerDiv) {
+  for (id in scenes) {
+    var btn = createSceneBtn("s", id);
+    containerDiv.appendChild(btn);
+
+    forEachHotSpotAddBtns(scenes[id].hotSpots, containerDiv);
+  }
+}
+
+function forEachHotSpotAddBtns(hotspots, containerDiv) {
+  for (hs in hotspots) {
+    console.log(hotspots[hs].type);
+    if (hotspots[hs].type !== "scene") {
+      var btn = createFeatureBtn(hotspots[hs]);
+      containerDiv.appendChild(btn);
+    }
+  }
+}
+
+function populateOlNav(scene, master) {
   var current = master.scenes[scene]; // console.log(current);
   var scenes = master.scenes; // console.log(scenes);
   
@@ -29,6 +56,32 @@ function populateNav (scene, master) {
     controllerOl.appendChild(li);
   }
 }
+
+
+function createSceneBtn (sceneLabel, sceneId) {
+  var sceneBtn = document.createElement("a");
+
+  sceneBtn.innerHTML = sceneLabel;
+  sceneBtn.className = "sceneBtn";
+  sceneBtn.setAttribute("href", "#");
+  sceneBtn.setAttribute("id", "loadScene_" + sceneId)
+  sceneBtn.setAttribute("title", sceneId);
+  sceneBtn.addEventListener('click', function(e) { viewer.loadScene(sceneId) });
+  return sceneBtn;
+}
+
+
+function createFeatureBtn (hs) {
+  var lookBtn = document.createElement("a");
+  lookBtn.className = "featureBtn";
+  lookBtn.innerHTML = "h"
+  lookBtn.setAttribute("href", "#");
+  lookBtn.setAttribute("id", "lookAt_" + hs.createTooltipArgs.id);
+  lookBtn.setAttribute("title", hs.createTooltipArgs.label);
+  lookBtn.addEventListener('click', function(e) { viewer.lookAt(hs.pitch, hs.yaw, hs.hfov, 1500, viewer.stopAutoRotate()) });
+  return lookBtn;
+}
+
 
 function createLoadSceneBtn (sceneTitle, sceneId) {
   var li = document.createElement("li"),
