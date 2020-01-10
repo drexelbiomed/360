@@ -34,8 +34,20 @@ html, body {
   background-color: rgba(#ffc600, 0.75);
 }
 
-.pad-5 {
+.pad-5, .btn {
   padding-right: 5px;
+}
+
+.btn.sceneBtn {
+  font-size: 32px;
+}
+
+.btn.featureBtn {
+  font-size: 16px;
+}
+
+.btn.active {
+  background-color: #f00;
 }
 
 .hotspotV1 {

@@ -20,7 +20,7 @@ viewer = pannellum.viewer('viewer', {
       "yaw":  0,
       "hfov": 40,
       "minHfov": 20,
-      "maxHfov": 40,
+      "maxHfov": 28,
       "haov": 133,
       "vaov": 54,
       "minYaw": -42,
