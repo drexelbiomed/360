@@ -6,6 +6,7 @@ class HotSpot extends Feature {
     this.hfov = hfov;
   }
   action() {
-    console.log("Look At Hotspot Transition!");
+    viewer.stopMovement();
+    viewer.lookAt(this.pitch, this.yaw, this.hfov, 1500,);
   }
 }

@@ -8,6 +8,6 @@ class Scene extends Feature {
   }
 
   action() {
-    console.log("Load Scene Transition!");
+    viewer.loadScene(this.id);
   }
 }

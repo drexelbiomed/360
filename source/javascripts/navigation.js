@@ -29,13 +29,17 @@ class Navigation {
     }
     return features;
   }
+
   next() {
     this.counter ++;
+    this.features[this.counter].action();
     return this.features[this.counter];
   }
+
   prev() {
     if (this.counter > 0) {
       this.counter --;
+      this.features[this.counter].action();
     } else {
       console.log("At start, nowhere to go");
     }
