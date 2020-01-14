@@ -3,6 +3,7 @@ class Scene extends Feature {
     super(id);
     this.hotspots = [];
   }
+  
   addHotspot(hotspot) {
     this.hotspots.push(hotspot);
   }

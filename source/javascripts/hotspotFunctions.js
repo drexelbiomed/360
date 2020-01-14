@@ -1,12 +1,12 @@
 // Hot spot creation function
 function hotspotV1(hotSpotDiv, args) {
-  var hotspot = hotSpotDiv;
   var span = document.createElement('span');
   
-  hotspot.classList.add('tooltipV1');
-  hotspot.addEventListener("click", function(e) {
+  hotSpotDiv.setAttribute("id", args.id)
+  hotSpotDiv.classList.add('tooltipV1');
+  hotSpotDiv.addEventListener("click", function(e) {
     span.classList.toggle("show");
-    recordHotspot(args.id);
+    // recordHotspot(args.id);
   });
 
   if (isDefined(args.text)) { span.innerHTML += args.text; }

@@ -31,18 +31,32 @@ class Navigation {
   }
 
   next() {
+    // Dismiss Popup
+    if (this.features[this.counter].constructor.name == "HotSpot") {
+      this.features[this.counter].toggleToolTip();
+    }
+
     this.counter ++;
     this.features[this.counter].action();
-    return this.features[this.counter];
+    return this.current;
   }
 
   prev() {
     if (this.counter > 0) {
+      // Dismiss Popup
+      if (this.features[this.counter].constructor.name == "HotSpot") {
+        this.features[this.counter].toggleToolTip();
+      }
+
       this.counter --;
       this.features[this.counter].action();
     } else {
       console.log("At start, nowhere to go");
     }
-    return this.features[this.counter];
+    return this.current;
+  }
+
+  get current() {
+    return this.features[this.counter]
   }
 }
