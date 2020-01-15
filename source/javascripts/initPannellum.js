@@ -156,8 +156,8 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "star-video",
             "label": "Watch Star Scholars",
-            "text": "Watch Star Scholars",
-            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"
+            "text": "Watch Star Scholars"/*,
+            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
           }
         }
       ]
@@ -186,8 +186,8 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "co-op-video",
             "label": "Clinical Immersion Co-op",
-            "text": "Go on co-op!",
-            "video": "https://www.youtube-nocookie.com/embed/JZ_kUo7Gr6c"
+            "text": "Go on co-op!"/*,
+            "video": "https://www.youtube-nocookie.com/embed/JZ_kUo7Gr6c"*/
           }
         }, 
         {

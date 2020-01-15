@@ -7,21 +7,21 @@ class Navigation {
   get features() {
     let features = [];
     let sceneConfig = this.sceneConfig
-    for (let id in sceneConfig) {
+    for (let scId in sceneConfig) {
       // add scenes with hotspots
-      let scene = new Scene(id);
+      let scene = new Scene(scId);
       features.push(scene);
 
       // setup hotspots
-      let hotSpots = sceneConfig[id].hotSpots
+      let hotSpots = sceneConfig[scId].hotSpots
 
       for (let hs in hotSpots) {
         if (hotSpots[hs].type != "scene") {
-          let id = hotSpots[hs].createTooltipArgs.id;
+          let hsId = hotSpots[hs].createTooltipArgs.id;
           let pitch = hotSpots[hs].pitch;
           let yaw = hotSpots[hs].yaw;
           let hfov = hotSpots[hs].hfov;
-          let hotspot = new HotSpot(id, pitch, yaw, hfov);
+          let hotspot = new HotSpot(hsId, pitch, yaw, hfov, scId);
           scene.addHotspot(hotspot);
           features.push(hotspot);
         }
@@ -30,33 +30,38 @@ class Navigation {
     return features;
   }
 
-  next() {
-    // Dismiss Popup
-    if (this.features[this.counter].constructor.name == "HotSpot") {
-      this.features[this.counter].toggleToolTip();
-    }
+  get length() {
+    return this.features.length;
+  }
 
-    this.counter ++;
-    this.features[this.counter].action();
+  get current() {
+    return this.features[this.counter]
+  }
+
+  next() {
+    if (this.counter < this.length - 1) {
+      // Dismiss Popup
+      if ("HotSpot" == this.current.constructor.name) {
+        this.current.toggleToolTip();
+      }
+
+      this.counter++;
+      this.current.action();
+    }
     return this.current;
   }
 
   prev() {
     if (this.counter > 0) {
       // Dismiss Popup
-      if (this.features[this.counter].constructor.name == "HotSpot") {
-        this.features[this.counter].toggleToolTip();
+      if ("HotSpot" == this.current.constructor.name) {
+        this.current.toggleToolTip();
       }
-
-      this.counter --;
-      this.features[this.counter].action();
+      this.counter--;
+      this.current.action();
     } else {
       console.log("At start, nowhere to go");
     }
     return this.current;
-  }
-
-  get current() {
-    return this.features[this.counter]
   }
 }
