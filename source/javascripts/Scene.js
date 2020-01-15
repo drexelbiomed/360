@@ -3,12 +3,14 @@ class Scene extends Feature {
     super(id);
     this.hotspots = [];
   }
-  
+
   addHotspot(hotspot) {
     this.hotspots.push(hotspot);
   }
 
   action() {
-    viewer.loadScene(this.id);
+    if (viewer.getScene() != this.id) {
+      viewer.loadScene(this.id);
+    }
   }
 }

@@ -25,11 +25,11 @@ html, body {
 #controller {
   z-index: 999;
   position: absolute;
-  width: 38%;
+  // width: 38%;
   padding: 20px;
   bottom: 4px;
-  left: 62%;
-  min-width: 320px;
+  right: 0px;
+  // min-width: 320px;
   overflow-y: scroll;
   background-color: rgba(#ffc600, 0.9);
 }
@@ -111,4 +111,8 @@ div.tooltipV1 span.show:after {
 .show {
   visibility: visible;
   display: block;
+}
+
+.pnlm-panorama-info {
+  max-width: 50% !important;
 }

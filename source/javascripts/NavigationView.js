@@ -1,8 +1,8 @@
 class NavigationView {
   constructor(containerDiv) {
     this.div = containerDiv;
-    this.createPrevButton();
     this.createNextButton();
+    this.createPrevButton();
   }
 
   createIndicator() {}
@@ -14,13 +14,14 @@ class NavigationView {
     nextBtn.setAttribute("value", "Next >>");
     nextBtn.addEventListener('click', function(e) { nav.next() });
     this.div.appendChild(nextBtn);
+    this.div.appendChild(document.createElement("br"));
   }
 
   createPrevButton() {
     var prevBtn = document.createElement("input");
     prevBtn.setAttribute("type", "button");
     prevBtn.setAttribute("id", "prevBtn");
-    prevBtn.setAttribute("value", "<< Previous");
+    prevBtn.setAttribute("value", "<< Prev");
     prevBtn.addEventListener('click', function(e) { nav.prev() });
     this.div.appendChild(prevBtn);
   }

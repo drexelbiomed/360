@@ -38,8 +38,8 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "bossone-marker",
             "label": "Bossone Research Center",
-            "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>",
-            "image": "images/bossone.jpg"
+            "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>"//,
+            // "image": "images/bossone.jpg"
           }
         },
         {
@@ -52,8 +52,8 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "30th-marker",
             "label": "30th Street Station",
-            "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>",
-            "image": "images/30thStreet.jpg"
+            "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>"//,
+            //"image": "images/30thStreet.jpg"
           }
         }     
       ]

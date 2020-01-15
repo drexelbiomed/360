@@ -26,6 +26,7 @@ class HotSpot extends Feature {
   toggleToolTip() {
     let div = document.getElementById(this.id);
     let span = div.firstChild;
+    fixSpan(span);
     span.classList.toggle("show");
 
     // Remove event listener
