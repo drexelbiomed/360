@@ -32,6 +32,21 @@ html, body {
   // min-width: 320px;
   overflow-y: scroll;
   background-color: rgba(#ffc600, 0.9);
+  #nextBtn {
+    background-color: #07294d;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    margin-bottom: 16px;
+    font-size: 1em;
+  }
+  #prevBtn {
+    background-color: #006699;
+    border: none;
+    color: white;
+    padding: 16px 16px;
+    font-size: .75em;
+  }
 }
 
 .pad-5, .btn {
@@ -114,5 +129,5 @@ div.tooltipV1 span.show:after {
 }
 
 .pnlm-panorama-info {
-  max-width: 50% !important;
+  max-width: 68% !important;
 }
