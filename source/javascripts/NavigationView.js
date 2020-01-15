@@ -1,5 +1,30 @@
+class NavigationView {
+  constructor(containerDiv) {
+    this.div = containerDiv;
+    this.createPrevButton();
+    this.createNextButton();
+  }
 
+  createIndicator() {}
 
+  createNextButton() {
+    var nextBtn = document.createElement("input");
+    nextBtn.setAttribute("type", "button");
+    nextBtn.setAttribute("id", "nextBtn");
+    nextBtn.setAttribute("value", "Next >>");
+    nextBtn.addEventListener('click', function(e) { nav.next() });
+    this.div.appendChild(nextBtn);
+  }
+
+  createPrevButton() {
+    var prevBtn = document.createElement("input");
+    prevBtn.setAttribute("type", "button");
+    prevBtn.setAttribute("id", "prevBtn");
+    prevBtn.setAttribute("value", "<< Previous");
+    prevBtn.addEventListener('click', function(e) { nav.prev() });
+    this.div.appendChild(prevBtn);
+  }
+}
 
 
 // var controllerDiv = document.getElementById("controller");

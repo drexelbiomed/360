@@ -26,12 +26,12 @@ html, body {
   z-index: 999;
   position: absolute;
   width: 38%;
-  min-height: 320px;
-  top: 0px;
+  padding: 20px;
+  bottom: 4px;
   left: 62%;
   min-width: 320px;
   overflow-y: scroll;
-  background-color: rgba(#ffc600, 0.75);
+  background-color: rgba(#ffc600, 0.9);
 }
 
 .pad-5, .btn {
