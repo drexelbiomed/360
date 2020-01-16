@@ -39,6 +39,9 @@ html, body {
     padding: 16px 32px;
     margin-bottom: 16px;
     font-size: 1em;
+    &:disabled {
+      background-color: #666;
+    }
   }
   #prevBtn {
     background-color: #006699;
@@ -46,6 +49,9 @@ html, body {
     color: white;
     padding: 16px 16px;
     font-size: .75em;
+    &:disabled {
+      background-color: #666;
+    }
   }
 }
 

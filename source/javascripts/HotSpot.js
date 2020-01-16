@@ -8,7 +8,8 @@ class HotSpot extends Feature {
   }
 
   action() {
-    if (viewer.getScene() != this.sceneId) {
+    if (this.isViewerOn(this.sceneId)) {
+      this.protectNavigation();
       viewer.loadScene(this.sceneId);
       viewer.on('load',
         function () {

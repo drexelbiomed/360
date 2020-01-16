@@ -23,7 +23,7 @@ function hotspotV1(hotSpotDiv, args) {
 
 function fixSpan(span) {
   span.style.marginTop = -span.scrollHeight - 12 + 'px';
-  console.log(span.style.marginTop);
+  // console.log(span.style.marginTop);
 }
 
 function iframeVideo(embedUrl) {

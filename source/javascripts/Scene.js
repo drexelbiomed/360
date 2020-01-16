@@ -9,7 +9,8 @@ class Scene extends Feature {
   }
 
   action() {
-    if (viewer.getScene() != this.id) {
+    if (this.isViewerOn(this.id)) {
+      this.protectNavigation();
       viewer.loadScene(this.id);
     }
   }
