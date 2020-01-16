@@ -12,7 +12,7 @@ var initialConfig = {
     // =============================================
     "1-Skyline": {
       // "hotSpotDebug": true,
-      "title": "Philadelphia Skyline<br><small>View from Drexel Summit</small>",
+      "title": "Philadelphia Skyline<br><small>View from Summit Residence Hall</small>",
       "type": "equirectangular",
       "panorama": "images/Philly-Skyline.jpg",
       "maxPitch": 25,
@@ -38,7 +38,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "bossone-marker",
             "label": "Bossone Research Center",
-            "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>"//,
+            "text": "<strong>Bossone Research Center</strong><br><small>Home to Drexel BIOMED, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>"//,
             // "image": "images/bossone.jpg"
           }
         },
@@ -52,30 +52,93 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "30th-marker",
             "label": "30th Street Station",
-            "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>"//,
+            "text": "<strong>30th Street Station</strong><br><small>A block away from Drexel campus is Philadelphia's main railroad station and a major stop on Amtrak's Northeast and Keystone corridors.</small>"//,
             //"image": "images/30thStreet.jpg"
           }
-        }     
+        },
+        {
+          "pitch": -12.3,
+          "yaw": -13.7,
+          "hfov": 25,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "buckley-field",
+            "label": "Buckley Recreational Field",
+            "text": "<strong>Buckley Recreational Field</strong><br><small> utilized for informal recreation, intramurals, and club sports.</small>"//,
+            // "image": "images/bossone.jpg"
+          }
+        },
+        {
+          "pitch": -6.6,
+          "yaw": 21.9,
+          "hfov": 25,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "lancaster-walk",
+            "label": "Lancaster Walk",
+            "text": "<strong>Make Your Mark</strong><br><small> In 2001, Student Life began honoring incoming classes with dragon claw plaques on Lancaster Walk. The bronze plaques are presented at the end of New Student Week to encourage students to 'Make Your Mark' at Drexel.</small>"//,
+            // "image": "images/bossone.jpg"
+          }
+        }
       ]
     },
     // BIOMED Lobby
     // =============================================
     "2-BiomedLobby": {
       // "hotSpotDebug": true,
-      "title": "BIOMED Lobby<br><small>32nd and Market Streets</small>",
+      "title": "Bossone Research Center<br><small>BIOMED Lobby 7th Floor</small>",
       "panorama": "images/Lobby-cc.jpg",
       "type": "equirectangular",
       "pitch": -10,
       "yaw": -53.2,
       "hfov": 100,
-      "autoRotate": -2,
+      "autoRotate": 2,
       "hotSpots": [
         {
-          "pitch":  .9,
-          "yaw": -177,
-          "type": "scene",
-          "text": "Go to Bossone Atrium",
-          "sceneId": "BossoneAtrium"
+          "pitch": 18.8,
+          "yaw": -88.2,
+          "hfov": 75,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "faculty-directory",
+            "label": "Faculty Directory",
+            "text": "<strong>BIOMED Faculty Directory</strong><br><small>The mission of the School's faculty is to promote health and quality of life through education, research and innovation that integrates engineering and life sciences in a global context.</small>"//,
+            // "image": "images/bossone.jpg"
+          }
+        },
+        {
+          "pitch": -18.7,
+          "yaw": -126.6,
+          "hfov": 100,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "lifesaving-solutions",
+            "label": "Lifesaving Solutions",
+            "text": "<strong>Biomedical Engineers Save Lives</strong><br><small> The process is called translational research and it applies the latest discoveries in science to solve unmet medical needs bringing forth lifesaving solutions to the hands clinicians and medical professionals.</small>"//,
+            // "image": "images/bossone.jpg"
+          }
+        },
+        {
+          "pitch": -5.2,
+          "yaw": 42.3,
+          "hfov": 70,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "ultrasound-poster",
+            "label": "Ultrasound Poster",
+            "text": "<strong>Biomedical Ultrasound</strong><br><small>Did you know that the ultrasound technology behind Sonograms was developed here at Drexel by pioneer of the first clinical ultrasound scanner, Prof. Emeritus Dr. John Reid?</small>"//,
+            // "image": "images/bossone.jpg"
+          }
         }
       ]
     },
@@ -100,17 +163,17 @@ var initialConfig = {
           "sceneId": "BossoneAtrium"
         },
         {
-          "pitch": 13.7, 
-          "yaw": -169.2,
-          "hfov": 50,
+          "pitch": 16, 
+          "yaw": -172.9,
+          "hfov": 80,
           "type": "lookAt",
           "cssClass": "hotspotV1",
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "clock-marker",
             "label": "Ryder Clock",
-            "text": "\"Be on time\"",
-            "image": "images/Ryder_sitecore.jpg"
+            "text": "<strong>Ryder Clock</strong><br><small>The first dean of men, J. Peterson Ryder, had a penchant for punctuality, standing in the court, pocket-watch in hand, spurring on students late to class. He provided funds for the clock in the Great Court, inscribed, \"Be on Time.\"</small>"
+            // "image": "images/Ryder_sitecore.jpg"
           }
         },
         {
@@ -123,8 +186,8 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "auditorium-marker",
             "label": "Auditorium",
-            "text": "Main Auditorium is the heart of Drexel University's tradition and grandeur.",
-            "image": "images/Main_Auditorium.jpg"
+            "text": "<strong>Main Auditorium</strong><br><small>The heart of Drexel University's tradition and grandeur, and home to one of the largest pipe organs in the world.</small>"
+            // "image": "images/Main_Auditorium.jpg"
           }
         }
       ]
