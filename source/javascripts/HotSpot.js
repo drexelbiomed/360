@@ -1,9 +1,9 @@
 class HotSpot extends Feature {
-  constructor(id, pitch, yaw, hfov, sceneId) {
-    super(id);
+  constructor(sceneId, hsId, pitch, yaw, hfov) {
+    super(sceneId);
+    this.hsId = hsId;
     this.pitch = pitch;
     this.yaw = yaw;
     this.hfov = hfov;
-    this.sceneId = sceneId;
   }
 }

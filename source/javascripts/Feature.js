@@ -1,5 +1,5 @@
 class Feature {
-  constructor(id) {
-    this.id = id;
+  constructor(sceneId) {
+    this.sceneId = sceneId;
   }
 }

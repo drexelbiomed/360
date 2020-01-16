@@ -1,6 +1,6 @@
 class Scene extends Feature {
-  constructor(id) {
-    super(id);
+  constructor(sceneId) {
+    super(sceneId);
     this.hotspots = [];
   }
 

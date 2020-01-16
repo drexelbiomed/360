@@ -4,6 +4,7 @@ class NavigationController {
     this.counter = 0;
     this.pannellum = pannellum;
   }
+
   get features() {
     let features = [];
     let sceneConfig = this.sceneConfig
@@ -21,7 +22,7 @@ class NavigationController {
           let pitch = hotSpots[hs].pitch;
           let yaw = hotSpots[hs].yaw;
           let hfov = hotSpots[hs].hfov;
-          let hotspot = new HotSpot(hsId, pitch, yaw, hfov, scId);
+          let hotspot = new HotSpot(scId, hsId, pitch, yaw, hfov);
           scene.addHotspot(hotspot);
           features.push(hotspot);
         }
@@ -42,79 +43,84 @@ class NavigationController {
     return this.counter < this.length - 1;
   }
 
-  get isOnHotSpot() {
+  get currentIsHotSpot() {
     return "HotSpot" == this.current.constructor.name;
+  }
+
+  get isGoingToLoadScene() {
+    return this.pannellum.getScene() != this.current.sceneId;
   }
 
   next() {
     if (this.isCounterLessThanLength) {
-      // Dismiss Popup
-      if (this.isOnHotSpot) {
-        this.toggleToolTip();
-      }
-
+      
+      if (this.currentIsHotSpot) { this.toggleToolTip("dismiss"); } // Dismiss Popup
       this.counter++;
       this.navigate();
-      // this.current.action();
+
     }
+
     return this.current;
   }
 
   prev() {
     if (this.counter > 0) {
-      // Dismiss Popup
-      if (this.isOnHotSpot) {
-        this.toggleToolTip();
-      }
+
+      if (this.currentIsHotSpot) { this.toggleToolTip("dismiss"); } // Dismiss Popup
       this.counter--;
       this.navigate();
-      // this.current.action();
-    } else {
-      console.log("At start, nowhere to go");
-    }
+
+    } else { console.log("At start, nowhere to go"); }
+    
     return this.current;
   }
 
   navigate() {
-    if (this.isOnHotSpot) {
-      if (this.isViewerOn(this.current.sceneId)) {
-        this.protectNavigation();
+
+    if (this.currentIsHotSpot) {
+      if (this.isGoingToLoadScene) {
+        this.prepareNavigation();
+        
+        // load scene from previous button
         this.pannellum.on('load',
           function () {
             viewer.stopMovement();
-            viewer.lookAt(nav.current.pitch, nav.current.yaw, nav.current.hfov, 1500, nav.toggleToolTip());
+            viewer.lookAt(nav.current.pitch, nav.current.yaw, nav.current.hfov, 1500, nav.toggleToolTip("show"));
           }
         );
-        this.pannellum.loadScene(this.current.sceneId);
+        this.pannellum.loadScene(this.current.sceneId, this.current.pitch, this.current.yaw);
+
       } else {
-        console.log("got here 3");
+        
+        // look at from next button
         this.pannellum.stopMovement();
-        this.pannellum.lookAt(this.current.pitch, this.current.yaw, this.current.hfov, 1500, this.toggleToolTip());
+        this.pannellum.lookAt(this.current.pitch, this.current.yaw, this.current.hfov, 1500, this.toggleToolTip("show"));
       }
     } else {
-      if (this.isViewerOn(this.current.id)) {
-        console.log("got here 4");
-        this.protectNavigation();
-        this.pannellum.loadScene(this.current.id);
+      if (this.isGoingToLoadScene) {
+
+        // load scene from next button
+        this.prepareNavigation();
+        this.pannellum.loadScene(this.current.sceneId);
       }
     }
   }
 
-  isViewerOn(sceneId) {
-    return this.pannellum.getScene() != sceneId;
-  }
-
-  toggleToolTip() {
-    let div = document.getElementById(this.current.id);
+  toggleToolTip(msg) {
+    let div = document.getElementById(this.current.hsId);
     let span = div.firstChild;
-    fixSpan(span);
-    span.classList.toggle("show");
-
+    
+    if (msg == "show") { 
+      fixSpan(span);
+      span.classList.add("show");
+    } else if (msg == "dismiss") { 
+      span.classList.remove("show");
+    }
     // Remove event listener
     this.pannellum.off('load');
   }
 
-  protectNavigation() {
+  prepareNavigation() {
     this.pannellum.on('scenechange', function () {
       document.getElementById("nextBtn").disabled = true;
       document.getElementById("prevBtn").disabled = true;
