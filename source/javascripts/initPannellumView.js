@@ -1,9 +1,10 @@
-viewer = pannellum.viewer('viewer', {
+var initialConfig = {
   "default": {
     // "hotSpotDebug": true,
     "firstScene": "1-Skyline",
     // "author": "David Myers",
-    "sceneFadeDuration":  1500
+    "sceneFadeDuration":  1500,
+    "autoLoad": true
   },
 
   "scenes": {
@@ -25,7 +26,6 @@ viewer = pannellum.viewer('viewer', {
       "vaov": 54,
       "minYaw": -42,
       "maxYaw": 58,
-      "autoLoad": true,
       "autoRotate": -0.1,
       "hotSpots": [
         {
@@ -68,7 +68,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": -10,
       "yaw": -53.2,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": -2,
       "hotSpots": [
         {
@@ -91,7 +90,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": 0,
       "yaw": -171.2,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -143,7 +141,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": -7.65,
       "yaw": 12.93,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -173,7 +170,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": -7.65,
       "yaw": 12.93,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -209,7 +205,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": 31.5,
       "yaw": 68.2,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -236,4 +231,7 @@ viewer = pannellum.viewer('viewer', {
       ]
     }
   }
-});
+};
+
+var pannellumDiv = "viewer";
+var viewer = pannellum.viewer(pannellumDiv, initialConfig);

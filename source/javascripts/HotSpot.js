@@ -6,31 +6,4 @@ class HotSpot extends Feature {
     this.hfov = hfov;
     this.sceneId = sceneId;
   }
-
-  action() {
-    if (this.isViewerOn(this.sceneId)) {
-      this.protectNavigation();
-      viewer.loadScene(this.sceneId);
-      viewer.on('load',
-        function () {
-          // console.log('loaded');
-          viewer.stopMovement();
-          viewer.lookAt(nav.current.pitch, nav.current.yaw, nav.current.hfov, 1500, nav.current.toggleToolTip());
-        }
-      );
-    } else {
-      viewer.stopMovement();
-      viewer.lookAt(this.pitch, this.yaw, this.hfov, 1500, this.toggleToolTip());
-    }
-  }
-
-  toggleToolTip() {
-    let div = document.getElementById(this.id);
-    let span = div.firstChild;
-    fixSpan(span);
-    span.classList.toggle("show");
-
-    // Remove event listener
-    viewer.off('load');
-  }
 }

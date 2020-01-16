@@ -7,11 +7,4 @@ class Scene extends Feature {
   addHotspot(hotspot) {
     this.hotspots.push(hotspot);
   }
-
-  action() {
-    if (this.isViewerOn(this.id)) {
-      this.protectNavigation();
-      viewer.loadScene(this.id);
-    }
-  }
 }

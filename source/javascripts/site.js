@@ -1,16 +1,16 @@
-//= require initPannellum
+//= require initPannellumView
+//= require NavigationView
 
-//= require Navigation
+//= require NavigationController
+
 //= require Feature
 //= require Scene
 //= require HotSpot
-
-//= require NavigationView
 
 //= require hotspotFunctions
 //= require hotspotCounter
 
 var controller = document.getElementById('controller');
-var nav = new Navigation(viewer.getConfig(), viewer);
-var navUI = new NavigationView(controller, viewer);
+var nav = new NavigationController(initialConfig, viewer);
+var navUI = new NavigationView(controller);
 
