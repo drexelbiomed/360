@@ -1,12 +1,13 @@
 // Hot spot creation function
 function hotspotV1(hotSpotDiv, args) {
-  var hotspot = hotSpotDiv;
   var span = document.createElement('span');
   
-  hotspot.classList.add('tooltipV1');
-  hotspot.addEventListener("click", function(e) {
+  hotSpotDiv.setAttribute("id", args.id)
+  hotSpotDiv.classList.add('tooltipV1');
+  hotSpotDiv.addEventListener("click", function(e) {
+    fixSpan(span);
     span.classList.toggle("show");
-    recordHotspot(args.id);
+    // recordHotspot(args.id);
   });
 
   if (isDefined(args.text)) { span.innerHTML += args.text; }
@@ -18,6 +19,11 @@ function hotspotV1(hotSpotDiv, args) {
   span.style.width = span.scrollWidth - 20 + 'px';
   span.style.marginLeft = -(span.scrollWidth - hotSpotDiv.offsetWidth) / 2 + 'px';
   span.style.marginTop = -span.scrollHeight - 12 + 'px';
+}
+
+function fixSpan(span) {
+  span.style.marginTop = -span.scrollHeight - 12 + 'px';
+  // console.log(span.style.marginTop);
 }
 
 function iframeVideo(embedUrl) {

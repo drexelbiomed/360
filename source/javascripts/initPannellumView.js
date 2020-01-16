@@ -1,15 +1,16 @@
-viewer = pannellum.viewer('viewer', {
+var initialConfig = {
   "default": {
     // "hotSpotDebug": true,
-    "firstScene": "Skyline",
+    "firstScene": "1-Skyline",
     // "author": "David Myers",
-    "sceneFadeDuration":  1500
+    "sceneFadeDuration":  1500,
+    "autoLoad": true
   },
 
   "scenes": {
     // Skyline
     // =============================================
-    "Skyline": {
+    "1-Skyline": {
       // "hotSpotDebug": true,
       "title": "Philadelphia Skyline<br><small>View from Drexel Summit</small>",
       "type": "equirectangular",
@@ -20,12 +21,11 @@ viewer = pannellum.viewer('viewer', {
       "yaw":  0,
       "hfov": 40,
       "minHfov": 20,
-      "maxHfov": 40,
+      "maxHfov": 28,
       "haov": 133,
       "vaov": 54,
       "minYaw": -42,
       "maxYaw": 58,
-      "autoLoad": true,
       "autoRotate": -0.1,
       "hotSpots": [
         {
@@ -38,8 +38,8 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "bossone-marker",
             "label": "Bossone Research Center",
-            "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>",
-            "image": "images/bossone.jpg"
+            "text": "<strong>Bossone Research Center</strong><br><small>Drexel Biomed's home, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</small>"//,
+            // "image": "images/bossone.jpg"
           }
         },
         {
@@ -52,15 +52,15 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "30th-marker",
             "label": "30th Street Station",
-            "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>",
-            "image": "images/30thStreet.jpg"
+            "text": "<strong>30th Street Station</strong><br><small>Philadelphia's main railroad station (SEPTA Regional Rail &amp; Subway Lines), and is a major stop on Amtrak's Northeast and Keystone corridors.</small>"//,
+            //"image": "images/30thStreet.jpg"
           }
         }     
       ]
     },
     // BIOMED Lobby
     // =============================================
-    "BiomedLobby": {
+    "2-BiomedLobby": {
       // "hotSpotDebug": true,
       "title": "BIOMED Lobby<br><small>32nd and Market Streets</small>",
       "panorama": "images/Lobby-cc.jpg",
@@ -68,7 +68,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": -10,
       "yaw": -53.2,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": -2,
       "hotSpots": [
         {
@@ -83,7 +82,7 @@ viewer = pannellum.viewer('viewer', {
 
     // Main Building
     // =============================================
-    "MainBldg": {
+    "3-MainBldg": {
       // "hotSpotDebug": true,
       "title": "Go to Class - Main Building<br><small>32nd and Chestnut Streets</small>",
       "panorama": "images/Main-Bldg-Test-1-cc.jpg",
@@ -91,7 +90,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": 0,
       "yaw": -171.2,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -135,7 +133,7 @@ viewer = pannellum.viewer('viewer', {
 
     // Labs
     // =============================================
-    "BiomedLabs": {
+    "4-BiomedLabs": {
       // "hotSpotDebug": true,
       "title": "BIOMED Labs<br><small>STAR Research Program</small>",
       "panorama": "images/Labs_fused-cc.jpg",
@@ -143,7 +141,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": -7.65,
       "yaw": 12.93,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -156,8 +153,8 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "star-video",
             "label": "Watch Star Scholars",
-            "text": "Watch Star Scholars",
-            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"
+            "text": "Watch Star Scholars"/*,
+            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
           }
         }
       ]
@@ -165,7 +162,7 @@ viewer = pannellum.viewer('viewer', {
 
     // CHOP
     // =============================================
-    "Chop": {
+    "5-Chop": {
       // "hotSpotDebug": true,
       "title": "Go on Co-op<br><small>Children's Hospital of Philadelphia (CHOP)</small>",
       "panorama": "images/chop-cc.jpg",
@@ -173,7 +170,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": -7.65,
       "yaw": 12.93,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -186,8 +182,8 @@ viewer = pannellum.viewer('viewer', {
           "createTooltipArgs": { 
             "id": "co-op-video",
             "label": "Clinical Immersion Co-op",
-            "text": "Go on co-op!",
-            "video": "https://www.youtube-nocookie.com/embed/JZ_kUo7Gr6c"
+            "text": "Go on co-op!"/*,
+            "video": "https://www.youtube-nocookie.com/embed/JZ_kUo7Gr6c"*/
           }
         }, 
         {
@@ -201,7 +197,7 @@ viewer = pannellum.viewer('viewer', {
     },
         // Atrium
     // =============================================
-    "BossoneAtrium": {
+    "6-BossoneAtrium": {
       // "hotSpotDebug": true,
       "title": "Bossone 3rd Floor Atrium<br><small>32nd and Market Streets</small>",
       "type": "equirectangular",
@@ -209,7 +205,6 @@ viewer = pannellum.viewer('viewer', {
       "pitch": 31.5,
       "yaw": 68.2,
       "hfov": 100,
-      "autoLoad": true,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -236,4 +231,7 @@ viewer = pannellum.viewer('viewer', {
       ]
     }
   }
-});
+};
+
+var pannellumDiv = "viewer";
+var viewer = pannellum.viewer(pannellumDiv, initialConfig);
