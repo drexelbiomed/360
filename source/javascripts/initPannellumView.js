@@ -57,20 +57,6 @@ var initialConfig = {
           }
         },
         {
-          "pitch": -12.3,
-          "yaw": -13.7,
-          "hfov": 25,
-          "type": "lookAt",
-          "cssClass": "hotspotV1",
-          "createTooltipFunc": hotspotV1,
-          "createTooltipArgs": { 
-            "id": "buckley-field",
-            "label": "Buckley Recreational Field",
-            "text": "<strong>Buckley Recreational Field</strong><br><small> utilized for informal recreation, intramurals, and club sports.</small>"//,
-            // "image": "images/bossone.jpg"
-          }
-        },
-        {
           "pitch": -6.6,
           "yaw": 21.9,
           "hfov": 25,
@@ -93,9 +79,13 @@ var initialConfig = {
       "title": "Bossone Research Center<br><small>BIOMED Lobby 7th Floor</small>",
       "panorama": "images/Lobby-cc.jpg",
       "type": "equirectangular",
-      "pitch": -10,
-      "yaw": -53.2,
-      "hfov": 100,
+      "maxPitch": 50,
+      "minPitch": -50,
+      "minHfov": 30,
+      "maxHfov": 80,
+      "pitch": 0,
+      "yaw": -20,
+      "hfov": 55,
       "autoRotate": 2,
       "hotSpots": [
         {
@@ -107,14 +97,14 @@ var initialConfig = {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "faculty-directory",
-            "label": "Faculty Directory",
-            "text": "<strong>BIOMED Faculty Directory</strong><br><small>The mission of the School's faculty is to promote health and quality of life through education, research and innovation that integrates engineering and life sciences in a global context.</small>"//,
+            "label": "Welcome",
+            "text": "<strong>Welcome to BIOMED!</strong><br><small>The mission of the School's faculty is to promote health and quality of life through education, research and innovation that integrates engineering and life sciences in a global context.</small>"//,
             // "image": "images/bossone.jpg"
           }
         },
         {
-          "pitch": -18.7,
-          "yaw": -126.6,
+          "pitch": 5,
+          "yaw": -109.1,
           "hfov": 100,
           "type": "lookAt",
           "cssClass": "hotspotV1",
@@ -122,7 +112,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "lifesaving-solutions",
             "label": "Lifesaving Solutions",
-            "text": "<strong>Biomedical Engineers Save Lives</strong><br><small> The process is called translational research and it applies the latest discoveries in science to solve unmet medical needs bringing forth lifesaving solutions to the hands clinicians and medical professionals.</small>"//,
+            "text": "<strong>BIOMED Engineers <br>Save Lives</strong><br><small> <em>Biomedical Engineers</em> apply the latest discoveries in science to solve unmet medical needs bringing forth lifesaving solutions to the hands clinicians and medical professionals.</small>"//,
             // "image": "images/bossone.jpg"
           }
         },
@@ -136,8 +126,183 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "ultrasound-poster",
             "label": "Ultrasound Poster",
-            "text": "<strong>Biomedical Ultrasound</strong><br><small>Did you know that the ultrasound technology behind Sonograms was developed here at Drexel by pioneer of the first clinical ultrasound scanner, Prof. Emeritus Dr. John Reid?</small>"//,
+            "text": "<strong>Did you know?</strong><br><small>The ultrasound technology behind Sonograms was developed here at Drexel by pioneer of the first clinical ultrasound scanner, Prof. Emeritus Dr. John Reid?</small>"//,
             // "image": "images/bossone.jpg"
+          }
+        }
+      ]
+    },
+
+    // Labs
+    // =============================================
+
+    "3a-BiomedLabs": {
+      // "hotSpotDebug": true,
+      "title": "BIOMED Labs<br><small>a</small>",
+      "panorama": "images/2016_04_27_DreLab01_A.jpg",
+      "type": "equirectangular",
+      "maxPitch": 27,
+      "minPitch": -30,
+      "maxYaw": 39,
+      "minYaw": -39,
+      "pitch": 0,
+      "yaw":  0,
+      "hfov": 40,
+      "minHfov": 10,
+      "maxHfov": 30,
+      "haov": 80,
+      "vaov": 60,
+      "autoRotate": -0.5,
+      "hotSpots": [
+        {
+          "pitch":  1.5,
+          "yaw": -109.7,
+          "hfov": 80,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "fluorescent-microscope",
+            "label": "fluorescent microscope",
+            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "
+          }
+        }
+      ]
+    },
+    
+    "3b-BiomedLabs": {
+      // "hotSpotDebug": true,
+      "title": "BIOMED Labs<br><small>b</small>",
+      "panorama": "images/2015_04_07_DreBME02.jpg",
+      "type": "equirectangular",
+      "maxPitch": 27,
+      "minPitch": -30,
+      "maxYaw": 39,
+      "minYaw": -39,
+      "pitch": -3,
+      "yaw":  0,
+      "hfov": 40,
+      "minHfov": 20,
+      "maxHfov": 30,
+      "haov": 80,
+      "vaov": 60,
+      "autoRotate": -0.5,
+      "hotSpots": [
+        // {
+        //   "pitch":  1.5,
+        //   "yaw": -109.7,
+        //   "hfov": 80,
+        //   "type": "lookAt",
+        //   "cssClass": "hotspotV1",
+        //   "createTooltipFunc": hotspotV1,
+        //   "createTooltipArgs": { 
+        //     "id": "star-video",
+        //     "label": "Watch Star Scholars",
+        //     "text": "<strong>Meet BIOMED Dragon Alison Kane</strong><br><small>Rising Sophomore Alison Kane describes her experience tackling undergraduate research as a STAR Scholar.</small> [video:ud9-JOG_AR0]"/*,
+        //     "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
+        //   }
+        // }
+      ]
+    },
+
+    "3c-BiomedLabs": {
+      // "hotSpotDebug": true,
+      "title": "BIOMED Labs<br><small>c</small>",
+      "panorama": "images/2015_04_07_DreBME03_A.jpg",
+      "type": "equirectangular",
+      "maxPitch": 27,
+      "minPitch": -30,
+      "maxYaw": 39,
+      "minYaw": -39,
+      "pitch": 0,
+      "yaw":  -100,
+      "hfov": 40,
+      "minHfov": 20,
+      "maxHfov": 30,
+      "haov": 80,
+      "vaov": 60,
+      "autoRotate": -0.5,
+      "hotSpots": [
+        {
+          "pitch":  1.5,
+          "yaw": -109.7,
+          "hfov": 80,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "fluorescent-microscope",
+            "label": "fluorescent microscope",
+            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "/*,
+            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
+          }
+        }
+      ]
+    },
+
+    "3d-BiomedLabs": {
+      // "hotSpotDebug": true,
+      "title": "BIOMED Labs<br><small>Inside Microscope</small>",
+      "panorama": "images/macrophages.jpg",
+      "type": "equirectangular",
+      "maxPitch": 27,
+      "minPitch": -30,
+      "maxYaw": 39,
+      "minYaw": -39,
+      "pitch": 0,
+      "yaw":  -100,
+      "hfov": 40,
+      "minHfov": 20,
+      "maxHfov": 40,
+      "haov": 30,
+      "vaov": 30,
+      "autoRotate": -0.5,
+      "hotSpots": [
+        {
+          "pitch":  1.5,
+          "yaw": -109.7,
+          "hfov": 80,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "fluorescent-microscope",
+            "label": "fluorescent microscope",
+            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "
+          }
+        }
+      ]
+    },
+
+    "3e-BiomedLabs": {
+      // "hotSpotDebug": true,
+      "title": "BIOMED Labs<br><small>Sled Lab</small>",
+      "panorama": "images/2017_07_06DreBioMedSled01_A.jpg",
+      "type": "equirectangular",
+      "maxPitch": 27,
+      "minPitch": -30,
+      "maxYaw": 38,
+      "minYaw": -38,
+      "pitch": 0,
+      "yaw":  0,
+      "hfov": 50,
+      "minHfov": 20,
+      "maxHfov": 80,
+      "haov": 80,
+      "vaov": 60,
+      "autoRotate": -0.5,
+      "hotSpots": [
+        {
+          "pitch":  1.5,
+          "yaw": -109.7,
+          "hfov": 80,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "fluorescent-microscope",
+            "label": "fluorescent microscope",
+            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "
           }
         }
       ]
@@ -145,7 +310,7 @@ var initialConfig = {
 
     // Main Building
     // =============================================
-    "3-MainBldg": {
+    "4-MainBldg": {
       // "hotSpotDebug": true,
       "title": "Go to Class - Main Building<br><small>32nd and Chestnut Streets</small>",
       "panorama": "images/Main-Bldg-Test-1-cc.jpg",
@@ -173,7 +338,6 @@ var initialConfig = {
             "id": "clock-marker",
             "label": "Ryder Clock",
             "text": "<strong>Ryder Clock</strong><br><small>The first dean of men, J. Peterson Ryder, had a penchant for punctuality, standing in the court, pocket-watch in hand, spurring on students late to class. He provided funds for the clock in the Great Court, inscribed, \"Be on Time.\"</small>"
-            // "image": "images/Ryder_sitecore.jpg"
           }
         },
         {
@@ -187,41 +351,11 @@ var initialConfig = {
             "id": "auditorium-marker",
             "label": "Auditorium",
             "text": "<strong>Main Auditorium</strong><br><small>The heart of Drexel University's tradition and grandeur, and home to one of the largest pipe organs in the world.</small>"
-            // "image": "images/Main_Auditorium.jpg"
           }
         }
       ]
     },
 
-
-    // Labs
-    // =============================================
-    "4-BiomedLabs": {
-      // "hotSpotDebug": true,
-      "title": "BIOMED Labs<br><small>STAR Research Program</small>",
-      "panorama": "images/Labs_fused-cc.jpg",
-      "type": "equirectangular",
-      "pitch": -7.65,
-      "yaw": 12.93,
-      "hfov": 100,
-      "autoRotate": 2,
-      "hotSpots": [
-        {
-          "pitch":  1.5,
-          "yaw": -52,
-          "hfov": 50,
-          "type": "lookAt",
-          "cssClass": "hotspotV1",
-          "createTooltipFunc": hotspotV1,
-          "createTooltipArgs": { 
-            "id": "star-video",
-            "label": "Watch Star Scholars",
-            "text": "Watch Star Scholars"/*,
-            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
-          }
-        }
-      ]
-    },
 
     // CHOP
     // =============================================
@@ -245,8 +379,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "co-op-video",
             "label": "Clinical Immersion Co-op",
-            "text": "Go on co-op!"/*,
-            "video": "https://www.youtube-nocookie.com/embed/JZ_kUo7Gr6c"*/
+            "text": "Go on co-op! [video:JZ_kUo7Gr6c]"
           }
         }, 
         {
