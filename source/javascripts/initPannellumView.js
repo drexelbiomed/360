@@ -1,7 +1,8 @@
 var initialConfig = {
   "default": {
-    // "hotSpotDebug": true,
-    "firstScene": "1-Skyline",
+    "hotSpotDebug": true,
+    // "firstScene": "1-Skyline",
+    "firstScene": "3a-BiomedLabs",
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
     "autoLoad": true
@@ -155,16 +156,16 @@ var initialConfig = {
       "autoRotate": -0.5,
       "hotSpots": [
         {
-          "pitch":  1.5,
-          "yaw": -109.7,
+          "pitch":  -2.4,
+          "yaw": -1.2,
           "hfov": 80,
           "type": "lookAt",
           "cssClass": "hotspotV1",
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
-            "id": "fluorescent-microscope",
-            "label": "fluorescent microscope",
-            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "
+            "id": "3d-printer",
+            "label": "3d-printer",
+            "text": "<strong>3D Printed Living Cells</strong><br><small>Drexel BIOMED is home to cutting edge research facilities where students gain exposure to state-of-the-art techniques, such as biofabrication.</small> "
           }
         }
       ]
@@ -188,20 +189,20 @@ var initialConfig = {
       "vaov": 60,
       "autoRotate": -0.5,
       "hotSpots": [
-        // {
-        //   "pitch":  1.5,
-        //   "yaw": -109.7,
-        //   "hfov": 80,
-        //   "type": "lookAt",
-        //   "cssClass": "hotspotV1",
-        //   "createTooltipFunc": hotspotV1,
-        //   "createTooltipArgs": { 
-        //     "id": "star-video",
-        //     "label": "Watch Star Scholars",
-        //     "text": "<strong>Meet BIOMED Dragon Alison Kane</strong><br><small>Rising Sophomore Alison Kane describes her experience tackling undergraduate research as a STAR Scholar.</small> [video:ud9-JOG_AR0]"/*,
-        //     "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
-        //   }
-        // }
+        {
+          "pitch": -5.7,
+          "yaw": -16.6,
+          "hfov": 80,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "pipette",
+            "label": "Lab Skills",
+            "text": "<strong>Mastering Lab Skills</strong><br><small>BIOMED students get plenty of time to sharpen both lab &amp; analytical skills prior to their 6 month co-op employment(s).</small>"/*,
+            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
+          }
+        }
       ]
     },
 
@@ -224,8 +225,8 @@ var initialConfig = {
       "autoRotate": -0.5,
       "hotSpots": [
         {
-          "pitch":  1.5,
-          "yaw": -109.7,
+          "pitch": 2.5,
+          "yaw": -16,
           "hfov": 80,
           "type": "lookAt",
           "cssClass": "hotspotV1",
@@ -233,7 +234,21 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "fluorescent-microscope",
             "label": "fluorescent microscope",
-            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "/*,
+            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy makes it possible to visualize fluorescent proteins or dyes at the cellular and subcellular level.</small> "/*,
+            "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
+          }
+        },
+        {
+          "pitch": 0,
+          "yaw": 9,
+          "hfov": 80,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "fluorescent-microscope-2",
+            "label": "fluorescent microscope",
+            "text": "<strong>Live Imaging Microscope</strong><br><small>This advanced tool is for imaging live cells under growth conditions. See it for yourself!</small> "/*,
             "video": "https://www.youtube-nocookie.com/embed/ud9-JOG_AR0"*/
           }
         }
@@ -242,7 +257,7 @@ var initialConfig = {
 
     "3d-BiomedLabs": {
       // "hotSpotDebug": true,
-      "title": "BIOMED Labs<br><small>Inside Microscope</small>",
+      "title": "BIOMED Labs<br><small>Inside Fluorescent Microscope</small>",
       "panorama": "images/macrophages.jpg",
       "type": "equirectangular",
       "maxPitch": 27,
@@ -250,7 +265,7 @@ var initialConfig = {
       "maxYaw": 39,
       "minYaw": -39,
       "pitch": 0,
-      "yaw":  -100,
+      "yaw":  -5,
       "hfov": 40,
       "minHfov": 20,
       "maxHfov": 40,
@@ -259,16 +274,16 @@ var initialConfig = {
       "autoRotate": -0.5,
       "hotSpots": [
         {
-          "pitch":  1.5,
-          "yaw": -109.7,
+          "pitch": 4.9,
+          "yaw": 0,
           "hfov": 80,
           "type": "lookAt",
           "cssClass": "hotspotV1",
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
-            "id": "fluorescent-microscope",
-            "label": "fluorescent microscope",
-            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "
+            "id": "macrophage-cells",
+            "label": "macrophage cells",
+            "text": "<strong>Macrophage Cells</strong><br><small>Current research initiatives include tracking macrophage changes in the healing of diabetic wounds, which holds potential to allow a personalized medicine approach to wound care.</small> "
           }
         }
       ]
@@ -280,29 +295,29 @@ var initialConfig = {
       "panorama": "images/2017_07_06DreBioMedSled01_A.jpg",
       "type": "equirectangular",
       "maxPitch": 27,
-      "minPitch": -30,
+      "minPitch": -27,
       "maxYaw": 38,
       "minYaw": -38,
-      "pitch": 0,
-      "yaw":  0,
+      "pitch": 3,
+      "yaw":  -10,
       "hfov": 50,
       "minHfov": 20,
-      "maxHfov": 80,
+      "maxHfov": 33,
       "haov": 80,
       "vaov": 60,
       "autoRotate": -0.5,
       "hotSpots": [
         {
-          "pitch":  1.5,
-          "yaw": -109.7,
+          "pitch":  9.25,
+          "yaw": 0.3,
           "hfov": 80,
           "type": "lookAt",
           "cssClass": "hotspotV1",
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
-            "id": "fluorescent-microscope",
-            "label": "fluorescent microscope",
-            "text": "<strong>Fluorescence Microscopy</strong><br><small>Fluorescence microscopy has become an essential tool in biology as well as in materials science. See for yourself!</small> "
+            "id": "seatbelt",
+            "label": "seatbelt",
+            "text": "<strong>Featured on Discovery Channel</strong><br><small>Learn about Dr. Sri Balasubramanian's Sled Lab research</small> [video:IoHH4YuzGDk] "
           }
         }
       ]
