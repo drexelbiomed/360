@@ -1,8 +1,8 @@
 var initialConfig = {
   "default": {
-    "hotSpotDebug": true,
-    // "firstScene": "1-Skyline",
-    "firstScene": "3a-BiomedLabs",
+    // "hotSpotDebug": true,
+    "firstScene": "1-Skyline",
+    // "firstScene": "3a-BiomedLabs",
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
     "autoLoad": true
@@ -405,42 +405,43 @@ var initialConfig = {
           "sceneId": "BossoneAtrium"
         }
       ]
-    },
+    }
+    // ,
         // Atrium
     // =============================================
-    "6-BossoneAtrium": {
+    // "6-BossoneAtrium": {
       // "hotSpotDebug": true,
-      "title": "Bossone 3rd Floor Atrium<br><small>32nd and Market Streets</small>",
-      "type": "equirectangular",
-      "panorama": "images/Atrium_2.jpg",
-      "pitch": 31.5,
-      "yaw": 68.2,
-      "hfov": 100,
-      "autoRotate": 2,
-      "hotSpots": [
-        {
-          "pitch": -2.3,
-          "yaw": -145.1,
-          "type": "scene",
-          "text": "Go to Main Building",
-          "sceneId": "MainBldg"
-        },
-        {
-          "pitch": 1.5,
-          "yaw": 104,
-          "type": "scene",
-          "text": "Elevator to Biomed 7th Floor Lobby",
-          "sceneId": "BiomedLobby"
-        },
-        {
-          "pitch": 27.6,
-          "yaw": 22.4,
-          "type": "scene",
-          "text": "Go to the labs",
-          "sceneId": "BiomedLabs"
-        }
-      ]
-    }
+    //   "title": "Bossone 3rd Floor Atrium<br><small>32nd and Market Streets</small>",
+    //   "type": "equirectangular",
+    //   "panorama": "images/Atrium_2.jpg",
+    //   "pitch": 31.5,
+    //   "yaw": 68.2,
+    //   "hfov": 100,
+    //   "autoRotate": 2,
+    //   "hotSpots": [
+    //     {
+    //       "pitch": -2.3,
+    //       "yaw": -145.1,
+    //       "type": "scene",
+    //       "text": "Go to Main Building",
+    //       "sceneId": "MainBldg"
+    //     },
+    //     {
+    //       "pitch": 1.5,
+    //       "yaw": 104,
+    //       "type": "scene",
+    //       "text": "Elevator to Biomed 7th Floor Lobby",
+    //       "sceneId": "BiomedLobby"
+    //     },
+    //     {
+    //       "pitch": 27.6,
+    //       "yaw": 22.4,
+    //       "type": "scene",
+    //       "text": "Go to the labs",
+    //       "sceneId": "BiomedLabs"
+    //     }
+    //   ]
+    // }
   }
 };
 
