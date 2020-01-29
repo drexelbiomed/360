@@ -10,6 +10,8 @@ html, body {
 }
 
 #controller {
+  border-radius: 3px;
+
   p, ol, ul, li {
     font-family: Arial, sans-serif;
     color: #07294d;
@@ -135,5 +137,18 @@ div.tooltipV1 span.show:after {
 }
 
 .pnlm-panorama-info {
-  max-width: 68% !important;
+  width: 320px;
+  top: 0px;
+  left: 50%;
+  margin-left: -160px;
+  bottom: inherit !important;
+  text-align: center !important;
+  background-color: rgba(7,41,77,0.5) !important;
+
+  .pnlm-title-box {
+    width: 100%;
+    h1, p { 
+      margin: 0; 
+    }
+  }
 }
