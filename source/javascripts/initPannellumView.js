@@ -1,13 +1,15 @@
 var initialConfig = {
   "default": {
     // "hotSpotDebug": true,
-    // "firstScene": "1-Skyline",
-    "firstScene": "6-PISB",
+    "firstScene": "1-Skyline",
+    // "firstScene": "4-MainBldg",
+    // "firstScene": "6-PISB",
     // "firstScene": "7-PISB-NEBEC",
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
     "preview": "images/Tiny-Planet.jpg",
     "showFullscreenCtrl": false,
+    "showControls": false,
     "autoLoad": true
   },
 
@@ -16,7 +18,7 @@ var initialConfig = {
     // =============================================
     "1-Skyline": {
       // "hotSpotDebug": true,
-      "title": "<h1>Philadelphia Skyline</h1><p>View from Summit Residence Hall</p>",
+      "title": "<h1>Philadelphia Skyline</h1><p>View from The Summit <br>3400 Lancaster Ave</p>",
       "type": "equirectangular",
       "panorama": "images/Philly-Skyline.jpg",
       "maxPitch": 25,
@@ -56,7 +58,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "30th-marker",
             "label": "30th Street Station",
-            "text": "<h1>30th Street Station</h1><p>A block away from Drexel campus is Philadelphia's main railroad station and a major stop on Amtrak's Northeast and Keystone corridors.</p>"//,
+            "text": "<h1>30th Street Station</h1><p>Philadelphia's main transportation hub, one block from Drexel campus. A major stop on Amtrak's Northeast and Keystone corridors.</p>"//,
             //"image": "images/30thStreet.jpg"
           }
         },
@@ -92,20 +94,20 @@ var initialConfig = {
       "hfov": 55,
       "autoRotate": 2,
       "hotSpots": [
-        {
-          "pitch": 18.8,
-          "yaw": -88.2,
-          "hfov": 75,
-          "type": "lookAt",
-          "cssClass": "hotspotV1",
-          "createTooltipFunc": hotspotV1,
-          "createTooltipArgs": { 
-            "id": "faculty-directory",
-            "label": "Welcome",
-            "text": "<h1>Welcome to BIOMED!</h1><p>The mission of the School's faculty is to promote health and quality of life through education, research and innovation that integrates engineering and life sciences in a global context.</p>"//,
-            // "image": "images/bossone.jpg"
-          }
-        },
+        // {
+        //   "pitch": 18.8,
+        //   "yaw": -88.2,
+        //   "hfov": 75,
+        //   "type": "lookAt",
+        //   "cssClass": "hotspotV1",
+        //   "createTooltipFunc": hotspotV1,
+        //   "createTooltipArgs": { 
+        //     "id": "faculty-directory",
+        //     "label": "Welcome",
+        //     "text": "<h1>Welcome to BIOMED!</h1><p>The mission of the School's faculty is to promote health and quality of life through education, research and innovation that integrates engineering and life sciences in a global context.</p>"//,
+        //     // "image": "images/bossone.jpg"
+        //   }
+        // },
         {
           "pitch": 5,
           "yaw": -109.1,
@@ -130,7 +132,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "ultrasound-poster",
             "label": "Ultrasound Poster",
-            "text": "<h1>Did you know?</h1><p>The ultrasound technology behind Sonograms was developed here at Drexel by pioneer of the first clinical ultrasound scanner, Prof. Emeritus Dr. John Reid?</p>"//,
+            "text": "<h1>Did you know?</h1><p>The ultrasound technology behind Sonograms was developed by Drexel Prof. Emeritus Dr. John Reid?</p>"//,
             // "image": "images/bossone.jpg"
           }
         }
@@ -139,6 +141,36 @@ var initialConfig = {
 
     // Labs
     // =============================================
+
+    // PISB
+    // =============================================
+    "6-PISB": {
+      "hotSpotDebug": true,
+      "title": "<h1>PISB</h1><p>Papadaskis Integrated Sciences Building</p>",
+      "type": "equirectangular",
+      "panorama": "images/PISB-Panorama-CC.jpg",
+      "horizonRoll": -1,
+      "horizonPitch": -1.5,
+      "pitch": -1.5,
+      "yaw": -180,
+      "hfov": 100,
+      "autoRotate": -2,
+      "hotSpots": [
+        {
+          "pitch":  10,
+          "yaw": -32,
+          "hfov": 50,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "pisb-video",
+            "label": "Josue",
+            "text": "<h1>Bio Wall</h1> [video:CNk22zXR-yc]"
+          }
+        }, 
+      ]
+    },
 
     "3a-BiomedLabs": {
       // "hotSpotDebug": true,
@@ -292,6 +324,40 @@ var initialConfig = {
       ]
     },
 
+    "7-PISB-NEBEC": {
+      "hotSpotDebug": true,
+      "title": "<h1>PISB</h1><p>NorthEast BioEngineering Conference</p>",
+      "type": "equirectangular",
+      "panorama": "images/PISB-NEBEC-2.jpg",
+      "haov": 84,
+      "vaov": 100,
+      "pitch": -1.5,
+      "minPitch": -48,
+      "maxPitch": 45,
+      "yaw": 0,
+      "minYaw": -30,
+      "maxYaw": 30,
+      "hfov": 50,
+      "minHfov": 30,
+      "maxHfov": 64,
+      "autoRotate": -0.5,
+      "hotSpots": [
+        {
+          "pitch":  -13,
+          "yaw": 1,
+          "hfov": 45,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "nebec",
+            "label": "nebec",
+            "text": "<h1>Poster Presentations</h1><p>Students sharpen their communication skills and learn from their peers and mentors at conferences, such as NEBEC. </p>"
+          }
+        }, 
+      ]
+    }, 
+
     "3e-BiomedLabs": {
       // "hotSpotDebug": true,
       "title": "<h1>BIOMED Labs</h1><p>Sled Lab</p>",
@@ -339,14 +405,7 @@ var initialConfig = {
       "autoRotate": 2,
       "hotSpots": [
         {
-          "pitch":  6.8,
-          "yaw": 102.1,
-          "type": "scene",
-          "text": "Go to Bossone Atrium",
-          "sceneId": "6-PISB"
-        },
-        {
-          "pitch": 16, 
+          "pitch": 13, 
           "yaw": -172.9,
           "hfov": 80,
           "type": "lookAt",
@@ -355,7 +414,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "clock-marker",
             "label": "Ryder Clock",
-            "text": "<h1>Ryder Clock</h1><p>The first dean of men, J. Peterson Ryder, had a penchant for punctuality, standing in the court, pocket-watch in hand, spurring on students late to class. He provided funds for the clock in the Great Court, inscribed, \"Be on Time.\"</p>"
+            "text": "<h1>Ryder Clock</h1><p>The first dean of men, J. Peterson Ryder, had a penchant for punctuality, standing in the court, pocket-watch in hand, spurring on students late to class. The Ryder clock is inscribed, \"Be on Time.\"</p>"
           }
         },
         {
@@ -368,12 +427,11 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "auditorium-marker",
             "label": "Auditorium",
-            "text": "<h1>Main Auditorium</h1><p>The heart of Drexel University's tradition and grandeur, and home to one of the largest pipe organs in the world.</p>"
+            "text": "<h1>Main Building Video</h1> [video:_UvcF1Rp0LM]"
           }
         }
       ]
     },
-
 
     // CHOP
     // =============================================
@@ -407,69 +465,6 @@ var initialConfig = {
           "text": "Go to Bossone Atrium",
           "sceneId": "6-PISB"
         }
-      ]
-    },
-    // ,
-        // 6-PISB
-    // =============================================
-    "6-PISB": {
-      "hotSpotDebug": true,
-      "title": "<h1>PISB</h1><p>Papadaskis Integrated Sciences Building</p>",
-      "type": "equirectangular",
-      "panorama": "images/PISB-Panorama-CC.jpg",
-      "horizonRoll": -1,
-      "horizonPitch": -1.5,
-      "pitch": -1.5,
-      "yaw": -180,
-      "hfov": 100,
-      "autoRotate": -2,
-      "hotSpots": [
-        {
-          "pitch":  10,
-          "yaw": -32,
-          "hfov": 50,
-          "type": "lookAt",
-          "cssClass": "hotspotV1",
-          "createTooltipFunc": hotspotV1,
-          "createTooltipArgs": { 
-            "id": "co-op-video",
-            "label": "Josue",
-            "text": "Go on co-op! [video:CNk22zXR-yc]"
-          }
-        }, 
-      ]
-    },
-    "7-PISB-NEBEC": {
-      "hotSpotDebug": true,
-      "title": "<h1>PISB</h1><p>NorthEast BioEngineering Conference</p>",
-      "type": "equirectangular",
-      "panorama": "images/PISB-NEBEC-2.jpg",
-      "haov": 84,
-      "vaov": 100,
-      "pitch": -1.5,
-      "minPitch": -48,
-      "maxPitch": 45,
-      "yaw": 0,
-      "minYaw": -30,
-      "maxYaw": 30,
-      "hfov": 50,
-      "minHfov": 30,
-      "maxHfov": 64,
-      "autoRotate": -0.5,
-      "hotSpots": [
-        {
-          "pitch":  10,
-          "yaw": -32,
-          "hfov": 50,
-          "type": "lookAt",
-          "cssClass": "hotspotV1",
-          "createTooltipFunc": hotspotV1,
-          "createTooltipArgs": { 
-            "id": "co-op-video",
-            "label": "Josue",
-            "text": "Go on co-op! [video:CNk22zXR-yc]"
-          }
-        }, 
       ]
     }
   }
