@@ -85,7 +85,7 @@ class NavigationController {
         this.pannellum.on('load',
           function () {
             viewer.stopMovement();
-            viewer.lookAt(nav.current.pitch, nav.current.yaw, nav.current.hfov, 2500, nav.toggleToolTip("show"));
+            viewer.lookAt(nav.current.pitch, nav.current.yaw, nav.current.hfov, 2500, nav.toggleToolTip("show_backwards"));
           }
         );
         this.pannellum.loadScene(this.current.sceneId, this.current.pitch, this.current.yaw);
@@ -109,13 +109,34 @@ class NavigationController {
   toggleToolTip(msg) {
     let div = document.getElementById(this.current.hsId);
     let span = div.firstChild;
+    // console.log(msg);
     
-    if (msg == "show") { 
+    if (msg == "show" || msg == "show_backwards") { 
       fixSpan(span);
       span.classList.add("show");
     } else if (msg == "dismiss") { 
       span.classList.remove("show");
     }
+
+    if (span.getElementsByTagName('iframe').length > 0) {
+      let iframe = span.getElementsByTagName('iframe')[0];
+      var player = YT.get(iframe.id);
+      // prevent bug from navigating to already opened video
+      if (msg != "show_backwards") {
+        var s = player.getPlayerState();
+        if (msg == "show") {
+          if (s == 2 || s == 3 || s == 5) {
+            togglePlayer(player);
+          }
+        }
+        if (msg == "dismiss") {
+          if (s == 1 || s == 2 || s == 3) {
+            togglePlayer(player);
+          }
+        }
+      }
+    }
+
     // Remove event listener
     this.pannellum.off('load');
   }
