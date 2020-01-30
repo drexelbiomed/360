@@ -44,7 +44,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "bossone-marker",
             "label": "Bossone Research Center",
-            "text": "<h1>Bossone Research Center</h1><p>Home to Drexel BIOMED, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</p>"//,
+            "text": "<h1>Bossone Research Center</h1><p>Home to Drexel BIOMED, anchoring Philadelphia's 'Avenue of Technology' on 32nd and Market Street</p>[video:3bb9_qrmO5w]"//,
             // "image": "images/bossone.jpg"
           }
         },
@@ -58,7 +58,7 @@ var initialConfig = {
           "createTooltipArgs": { 
             "id": "30th-marker",
             "label": "30th Street Station",
-            "text": "<h1>30th Street Station</h1><p>Philadelphia's main transportation hub, one block from Drexel campus. A major stop on Amtrak's Northeast and Keystone corridors.</p>"//,
+            "text": "<h1>30th Street Station</h1><p>Philadelphia's main transportation hub, one block from Drexel campus. A major stop on Amtrak's Northeast and Keystone corridors.</p>"//, 
             //"image": "images/30thStreet.jpg"
           }
         },

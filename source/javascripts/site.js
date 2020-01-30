@@ -1,3 +1,4 @@
+//= require youtubeApi
 //= require initPannellumView
 //= require NavigationView
 

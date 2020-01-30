@@ -116,6 +116,14 @@ class NavigationController {
     } else if (msg == "dismiss") { 
       span.classList.remove("show");
     }
+
+    if (span.getElementsByTagName('iframe').length > 0) {
+      let iframe = span.getElementsByTagName('iframe')[0];
+      var player = YT.get(iframe.id);
+      // console.log(player);
+      togglePlayer(player);
+    }
+
     // Remove event listener
     this.pannellum.off('load');
   }
