@@ -1,6 +1,6 @@
 var initialConfig = {
   "default": {
-    // "hotSpotDebug": true,
+    "hotSpotDebug": false,
     "firstScene": "1-Skyline",
     // "firstScene": "4-MainBldg",
     // "firstScene": "6-PISB",
@@ -145,7 +145,7 @@ var initialConfig = {
     // PISB
     // =============================================
     "6-PISB": {
-      "hotSpotDebug": true,
+      // "hotSpotDebug": true,
       "title": "<h1>PISB</h1><p>Papadaskis Integrated Sciences Building</p>",
       "type": "equirectangular",
       "panorama": "images/PISB-Panorama-CC.jpg",
@@ -325,7 +325,7 @@ var initialConfig = {
     },
 
     "7-PISB-NEBEC": {
-      "hotSpotDebug": true,
+      // "hotSpotDebug": true,
       "title": "<h1>PISB</h1><p>NorthEast BioEngineering Conference</p>",
       "type": "equirectangular",
       "panorama": "images/PISB-NEBEC-2.jpg",
