@@ -2,8 +2,8 @@ class NavigationView {
   constructor(containerDiv) {
     this.div = containerDiv;
     this.btnIds = [];
-    this.createNextButton();
     this.createPrevButton();
+    this.createNextButton();
   }
 
   createIndicator() {}
@@ -16,7 +16,7 @@ class NavigationView {
     nextBtn.setAttribute("value", "Next >>");
     nextBtn.addEventListener('click', function(e) { nav.next() });
     this.div.appendChild(nextBtn);
-    this.div.appendChild(document.createElement("br"));
+    // this.div.appendChild(document.createElement("br"));
     this.btnIds.push(btnId);
   }
 

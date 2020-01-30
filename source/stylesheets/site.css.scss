@@ -10,6 +10,8 @@ html, body {
 }
 
 #controller {
+  border-radius: 3px;
+
   p, ol, ul, li {
     font-family: Arial, sans-serif;
     color: #07294d;
@@ -26,15 +28,18 @@ html, body {
   z-index: 999;
   position: absolute;
   // width: 38%;
-  padding: 20px;
+  padding: 0px;
   bottom: 4px;
-  right: 0px;
-  // min-width: 320px;
+  left: 50%;
+  width: 240px;
+  margin-left: -120px;
+  text-align: center;
   overflow-y: scroll;
-  background-color: rgba(#ffc600, 0.9);
+  // background-color: rgba(#ffc600, 0.5);
   #nextBtn {
     background-color: #07294d;
     border: none;
+    border-radius: 3px;
     color: white;
     padding: 16px 32px;
     margin-bottom: 16px;
@@ -46,8 +51,10 @@ html, body {
   #prevBtn {
     background-color: #006699;
     border: none;
+    border-radius: 3px;
     color: white;
-    padding: 16px 16px;
+    padding: 10px 16px;
+    margin-right: 20px;
     font-size: .75em;
     &:disabled {
       background-color: #666;
@@ -135,5 +142,27 @@ div.tooltipV1 span.show:after {
 }
 
 .pnlm-panorama-info {
-  max-width: 68% !important;
+  width: 240px;
+  top: 4px;
+  bottom: inherit !important;
+  left: 50%;
+  margin-left: -120px;
+  text-align: center !important;
+  background-color: transparent !important;
+
+  .pnlm-title-box {
+    width: 100%;
+    text-shadow: 0px 2px 5px #000;
+    h1, p { margin: 0; }
+  }
+}
+
+.pnlm-container {
+  h1 { font-size: 1.2em; }
+  p { font-size: .8em; }
+}
+.pnlm-hotspot-base {
+  span {
+    h1, p { margin: 0; }
+  }
 }

@@ -85,7 +85,7 @@ class NavigationController {
         this.pannellum.on('load',
           function () {
             viewer.stopMovement();
-            viewer.lookAt(nav.current.pitch, nav.current.yaw, nav.current.hfov, 1500, nav.toggleToolTip("show"));
+            viewer.lookAt(nav.current.pitch, nav.current.yaw, nav.current.hfov, 2500, nav.toggleToolTip("show"));
           }
         );
         this.pannellum.loadScene(this.current.sceneId, this.current.pitch, this.current.yaw);
@@ -94,7 +94,7 @@ class NavigationController {
         
         // look at from next button
         this.pannellum.stopMovement();
-        this.pannellum.lookAt(this.current.pitch, this.current.yaw, this.current.hfov, 1500, this.toggleToolTip("show"));
+        this.pannellum.lookAt(this.current.pitch, this.current.yaw, this.current.hfov, 2500, this.toggleToolTip("show"));
       }
     } else {
       if (this.isGoingToLoadScene) {
