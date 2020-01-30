@@ -65,18 +65,18 @@ function iframeVideo(embedUrl) {
 
 function togglePlayer(p) {
   if (isDefined(p)) {
-    if (p.getPlayerState() == 2) { // paused
-      // p.playVideo();
-    } 
-    if (p.getPlayerState() == 5) { // cued
-      p.playVideo();
-    } 
     if (p.getPlayerState() == 1 ) { // playing
       p.pauseVideo();
     }
+    if (p.getPlayerState() == 2) { // paused
+      // p.playVideo();
+    } 
     if (p.getPlayerState() == 3 ) { // buffering
       p.pauseVideo();
     }
+    if (p.getPlayerState() == 5) { // cued
+      p.playVideo();
+    } 
   }
     //   if (p)
     //   p.playVideo();
