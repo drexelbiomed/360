@@ -55,7 +55,7 @@ function iframeVideo(embedUrl) {
   // construct html string
   var str = '<div class="fitVids">'
   str += '<iframe width="320" height="180" id="' + embedUrl + '" ';
-  str += 'src="https://www.youtube-nocookie.com/embed/' + embedUrl + '?rel=0&amp;enablejsapi=1' + '" ';
+  str += 'src="https://www.youtube-nocookie.com/embed/' + embedUrl + '?rel=0&amp;enablejsapi=1&amp;modestbranding=1' + '" ';
   // str += '?modestbranding=1&cc_load_policy=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>'
   str += 'frameborder="0" enablejsapi="true" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>';
   str += '</iframe>';
@@ -75,7 +75,7 @@ function togglePlayer(p) {
       p.pauseVideo();
     }
     if (p.getPlayerState() == 5) { // cued
-      p.playVideo();
+      // p.playVideo();
     } 
   }
     //   if (p)

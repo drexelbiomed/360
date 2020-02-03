@@ -126,12 +126,12 @@ class NavigationController {
         var s = player.getPlayerState();
         if (msg == "show") {
           if (s == 2 || s == 3 || s == 5) {
-            togglePlayer(player);
+            // togglePlayer(player);
           }
         }
         if (msg == "dismiss") {
           if (s == 1 || s == 2 || s == 3) {
-            togglePlayer(player);
+            player.pauseVideo();
           }
         }
       }
