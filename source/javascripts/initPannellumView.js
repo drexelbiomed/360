@@ -8,7 +8,7 @@ var initialConfig = {
     // "firstScene": "7-PISB-NEBEC",
     // "firstScene": "8-Commencement",
     // "firstScene": "3b-BiomedLabs",
-    "firstScene": "8-Commencement",
+    // "firstScene": "8-Commencement",
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
     "preview": "images/Tiny-Planet.jpg",
@@ -408,8 +408,21 @@ var initialConfig = {
       "pitch": -7.65,
       "yaw": 12.93,
       "hfov": 100,
-      "autoRotate": 2,
+      "autoRotate": 2, 
       "hotSpots": [
+        {
+          "pitch": 40,
+          "yaw": -30,
+          "hfov": 90,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": {
+            "id": "chop-intro",
+            "label": "chop-intro",
+            "text": "<h1>Children's Hospital of Philadelphia (CHOP)</h1><p>CHOP has been ranked as the best children's hospital in the United States by U.S. News & World Report, and is located adjacent to Drexel's Campus"
+          }
+        },
         {
           "pitch":  1,
           "yaw": -10,
@@ -436,13 +449,6 @@ var initialConfig = {
             "text": "<h1>Clinical Immersion Co-op</h1><p>with Sonali Dadoo</p> [video:JZ_kUo7Gr6c]"
           }
         }, 
-        {
-          "pitch":  1.5,
-          "yaw": 100,
-          "type": "scene",
-          "text": "Go to Bossone Atrium",
-          "sceneId": "6-PISB"
-        }
       ]
     },
 
@@ -491,7 +497,7 @@ var initialConfig = {
     
     "8-Commencement": {
       "title": "<h1>Commencement!</h1><p>Citizens Bank Park</p>",
-      "panorama": "../images/2017_06_13_DreGra02_A.jpg",
+      "panorama": "images/2017_06_13_DreGra02_A.jpg",
       "type": "equirectangular",
       "haov": 80,
       "vaov": 60,

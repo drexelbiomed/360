@@ -12,7 +12,7 @@ var initialConfig = {
     // "firstScene": "3c-BiomedLabs",
     // "firstScene": "3d-BiomedLabs",
     // "firstScene": "3e-BiomedLabs",
-    "firstScene": "8-Commencement",
+    // "firstScene": "8-Commencement",
     // "firstScene": "Mario",
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
