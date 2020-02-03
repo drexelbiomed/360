@@ -12,6 +12,7 @@ var initialConfig = {
     // "firstScene": "3c-BiomedLabs",
     // "firstScene": "3d-BiomedLabs",
     // "firstScene": "3e-BiomedLabs",
+    "firstScene": "8-Commencement",
     // "firstScene": "Mario",
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
@@ -483,6 +484,19 @@ var initialConfig = {
             "id": "career",
             "label": "career",
             "text": "<h1>Career Pathways: Biomechanics Expert</h1><p>“David Jamison explains his role as an expert for injury causation cases at Robson Forensic and how he found this career path in biomedical engineering. </p> [video:YKEwbAPZsjM]"
+          }
+        },
+        {
+          "pitch":  10,
+          "yaw": 3,
+          "hfov": 28,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "end",
+            "label": "end",
+            "text": "<h1>The End!</h1><p>Thank you for taking the tour.</p><p><a target='_blank' href='https://drexel.edu/grad/events/overview/'>Visit Campus</a> | <a target='_blank' href='https://admissions.drexel.edu/apply/'>Apply Now</a> <br><a target='_blank' href='https://drexel.qualtrics.com/jfe/form/SV_5yzmqMW3MzBe17v'>Request More Info</a></p>"
           }
         }
       ]

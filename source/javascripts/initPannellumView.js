@@ -8,6 +8,7 @@ var initialConfig = {
     // "firstScene": "7-PISB-NEBEC",
     // "firstScene": "8-Commencement",
     // "firstScene": "3b-BiomedLabs",
+    "firstScene": "8-Commencement",
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
     "preview": "images/Tiny-Planet.jpg",
@@ -467,7 +468,7 @@ var initialConfig = {
           "createTooltipFunc": hotspotV1,
           "createTooltipArgs": { 
             "id": "clock-marker",
-            "label": "Ryder Clock",
+            "label": "clock",
             "text": "<h1>Ryder Clock</h1><p>The first dean of men, J. Peterson Ryder, had a penchant for punctuality, standing in the court, pocket-watch in hand, spurring on students late to class. The Ryder clock is inscribed, \"Be on Time.\"</p>"
           }
         },
@@ -487,24 +488,37 @@ var initialConfig = {
       ]
     },
 
+    
     "8-Commencement": {
-      // "hotSpotDebug": true,
-      "title": "<h1>Commencement!</h1><p>Main Building</p>",
-      "panorama": "images/commencement-pano-hugin.jpg",
+      "title": "<h1>Commencement!</h1><p>Citizens Bank Park</p>",
+      "panorama": "../images/2017_06_13_DreGra02_A.jpg",
       "type": "equirectangular",
-      "haov": 100,
+      "haov": 80,
       "vaov": 60,
-      "pitch": -5,
+      "pitch": 0,
       "minPitch": -28,
       "maxPitch": 28,
-      "yaw": 20,
-      "minYaw": -45,
-      "maxYaw": 45,
+      "yaw": 10,
+      "minYaw": -38,
+      "maxYaw": 38,
       "hfov": 28,
       "minHfov": 20,
       "maxHfov": 28,
-      "autoRotate": 0.5,
+      "autoRotate": 0.25,
       "hotSpots": [
+        {
+          "pitch":  1,
+          "yaw": 3,
+          "hfov": 28,
+          "type": "lookAt",
+          "cssClass": "hotspotV1",
+          "createTooltipFunc": hotspotV1,
+          "createTooltipArgs": { 
+            "id": "end",
+            "label": "end",
+            "text": "<h1>The End!</h1><p>Thank you for taking the tour.</p><p><a target='_blank' href='https://drexel.edu/undergrad/visit/overview/'>Visit Campus</a> | <a target='_blank' href='https://admissions.drexel.edu/apply/'>Apply Now</a> <br><a target='_blank' href='https://drexel.qualtrics.com/jfe/form/SV_5yzmqMW3MzBe17v'>Request More Info</a></p>"
+          }
+        }
       ]
     }
   }
