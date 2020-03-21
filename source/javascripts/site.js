@@ -12,6 +12,18 @@
 //= require hotspotCounter
 
 var controller = document.getElementById('controller');
-var nav = new NavigationController(initialConfig, viewer);
-var navUI = new NavigationView(controller);
+
+console.log(initialConfig.scenes);
+
+var nav, navUI;
+
+function initNav () {
+  console.log("Hello World");
+  nav = new NavigationController(initialConfig, viewer);
+  navUI = new NavigationView(controller);
+
+  viewer.off('load');
+}
+
+viewer.on('load', initNav);
 

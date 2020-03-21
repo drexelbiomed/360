@@ -12,7 +12,7 @@ var initialConfig = {
     // "author": "David Myers",
     "sceneFadeDuration":  1500,
     "preview": "images/Tiny-Planet.jpg",
-    "previewTitle": "<h1>BIOMED 360<br>Virtual Tour</h1>",
+    "previewTitle": "",
     "showFullscreenCtrl": false,
     "showControls": false,
     "autoLoad": false
@@ -411,7 +411,7 @@ var initialConfig = {
       "autoRotate": 2, 
       "hotSpots": [
         {
-          "pitch": 40,
+          "pitch": 20,
           "yaw": -30,
           "hfov": 90,
           "type": "lookAt",
@@ -420,7 +420,7 @@ var initialConfig = {
           "createTooltipArgs": {
             "id": "chop-intro",
             "label": "chop-intro",
-            "text": "<h1>Children's Hospital of Philadelphia (CHOP)</h1><p>CHOP has been ranked as the best children's hospital in the United States by U.S. News & World Report, and is located adjacent to Drexel's Campus"
+            "text": "<h1>The Children's Hospital of Philadelphia (CHOP)</h1><p>CHOP has been ranked as the best children's hospital in the United States by U.S. News & World Report, and is located adjacent to Drexel's Campus"
           }
         },
         {
